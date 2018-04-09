@@ -1,0 +1,3999 @@
+Iter: 0
+D loss: 1.344
+G_loss: 3.076
+
+Iter: 1000
+D loss: 0.00189
+G_loss: 7.894
+
+Iter: 2000
+D loss: 0.002665
+G_loss: 10.12
+
+Iter: 3000
+D loss: 0.02432
+G_loss: 6.123
+
+Iter: 4000
+D loss: 0.1419
+G_loss: 5.445
+
+Iter: 5000
+D loss: 0.1519
+G_loss: 5.346
+
+Iter: 6000
+D loss: 0.3109
+G_loss: 4.37
+
+Iter: 7000
+D loss: 0.4157
+G_loss: 4.051
+
+Iter: 8000
+D loss: 0.4611
+G_loss: 3.5
+
+Iter: 9000
+D loss: 0.4815
+G_loss: 3.867
+
+Iter: 10000
+D loss: 0.5796
+G_loss: 3.124
+
+Iter: 11000
+D loss: 0.5915
+G_loss: 2.9
+
+Iter: 12000
+D loss: 0.4433
+G_loss: 2.864
+
+Iter: 13000
+D loss: 0.5431
+G_loss: 2.515
+
+Iter: 14000
+D loss: 0.6448
+G_loss: 3.283
+
+Iter: 15000
+D loss: 0.6609
+G_loss: 2.551
+
+Iter: 16000
+D loss: 0.5864
+G_loss: 2.715
+
+Iter: 17000
+D loss: 0.5844
+G_loss: 2.533
+
+Iter: 18000
+D loss: 0.488
+G_loss: 2.428
+
+Iter: 19000
+D loss: 0.6072
+G_loss: 2.31
+
+Iter: 20000
+D loss: 0.5868
+G_loss: 2.236
+
+Iter: 21000
+D loss: 0.5902
+G_loss: 2.777
+
+Iter: 22000
+D loss: 0.7141
+G_loss: 2.172
+
+Iter: 23000
+D loss: 0.6537
+G_loss: 2.228
+
+Iter: 24000
+D loss: 0.6764
+G_loss: 2.364
+
+Iter: 25000
+D loss: 0.5776
+G_loss: 2.542
+
+Iter: 26000
+D loss: 0.62
+G_loss: 2.338
+
+Iter: 27000
+D loss: 0.4286
+G_loss: 2.687
+
+Iter: 28000
+D loss: 0.6266
+G_loss: 2.131
+
+Iter: 29000
+D loss: 0.7515
+G_loss: 2.215
+
+Iter: 30000
+D loss: 0.6192
+G_loss: 2.35
+
+Iter: 31000
+D loss: 0.5499
+G_loss: 2.37
+
+Iter: 32000
+D loss: 0.5022
+G_loss: 2.595
+
+Iter: 33000
+D loss: 0.5933
+G_loss: 2.572
+
+Iter: 34000
+D loss: 0.5752
+G_loss: 2.503
+
+Iter: 35000
+D loss: 0.6797
+G_loss: 2.412
+
+Iter: 36000
+D loss: 0.7532
+G_loss: 2.73
+
+Iter: 37000
+D loss: 0.5592
+G_loss: 2.533
+
+Iter: 38000
+D loss: 0.5629
+G_loss: 2.594
+
+Iter: 39000
+D loss: 0.5311
+G_loss: 2.404
+
+Iter: 40000
+D loss: 0.592
+G_loss: 2.114
+
+Iter: 41000
+D loss: 0.6934
+G_loss: 2.187
+
+Iter: 42000
+D loss: 0.6629
+G_loss: 2.253
+
+Iter: 43000
+D loss: 0.5511
+G_loss: 3.019
+
+Iter: 44000
+D loss: 0.5547
+G_loss: 2.562
+
+Iter: 45000
+D loss: 0.5159
+G_loss: 2.367
+
+Iter: 46000
+D loss: 0.6727
+G_loss: 2.27
+
+Iter: 47000
+D loss: 0.4521
+G_loss: 2.52
+
+Iter: 48000
+D loss: 0.5763
+G_loss: 2.406
+
+Iter: 49000
+D loss: 0.5902
+G_loss: 2.188
+
+Iter: 50000
+D loss: 0.5255
+G_loss: 2.446
+
+Iter: 51000
+D loss: 0.6196
+G_loss: 2.444
+
+Iter: 52000
+D loss: 0.4569
+G_loss: 2.408
+
+Iter: 53000
+D loss: 0.508
+G_loss: 2.56
+
+Iter: 54000
+D loss: 0.6166
+G_loss: 2.054
+
+Iter: 55000
+D loss: 0.4184
+G_loss: 2.56
+
+Iter: 56000
+D loss: 0.4663
+G_loss: 2.173
+
+Iter: 57000
+D loss: 0.5526
+G_loss: 2.424
+
+Iter: 58000
+D loss: 0.5769
+G_loss: 2.479
+
+Iter: 59000
+D loss: 0.5749
+G_loss: 2.125
+
+Iter: 60000
+D loss: 0.4658
+G_loss: 2.318
+
+Iter: 61000
+D loss: 0.5917
+G_loss: 2.399
+
+Iter: 62000
+D loss: 0.5824
+G_loss: 2.448
+
+Iter: 63000
+D loss: 0.6524
+G_loss: 2.182
+
+Iter: 64000
+D loss: 0.4439
+G_loss: 2.74
+
+Iter: 65000
+D loss: 0.5643
+G_loss: 2.738
+
+Iter: 66000
+D loss: 0.624
+G_loss: 2.428
+
+Iter: 67000
+D loss: 0.6049
+G_loss: 2.643
+
+Iter: 68000
+D loss: 0.4898
+G_loss: 2.768
+
+Iter: 69000
+D loss: 0.4439
+G_loss: 2.642
+
+Iter: 70000
+D loss: 0.6029
+G_loss: 2.253
+
+Iter: 71000
+D loss: 0.5174
+G_loss: 2.473
+
+Iter: 72000
+D loss: 0.5094
+G_loss: 2.544
+
+Iter: 73000
+D loss: 0.5342
+G_loss: 2.581
+
+Iter: 74000
+D loss: 0.6158
+G_loss: 2.718
+
+Iter: 75000
+D loss: 0.5607
+G_loss: 2.536
+
+Iter: 76000
+D loss: 0.4781
+G_loss: 2.337
+
+Iter: 77000
+D loss: 0.489
+G_loss: 2.474
+
+Iter: 78000
+D loss: 0.5504
+G_loss: 2.758
+
+Iter: 79000
+D loss: 0.5461
+G_loss: 2.416
+
+Iter: 80000
+D loss: 0.4724
+G_loss: 2.385
+
+Iter: 81000
+D loss: 0.6383
+G_loss: 2.543
+
+Iter: 82000
+D loss: 0.5054
+G_loss: 2.604
+
+Iter: 83000
+D loss: 0.4951
+G_loss: 2.455
+
+Iter: 84000
+D loss: 0.5829
+G_loss: 2.489
+
+Iter: 85000
+D loss: 0.4338
+G_loss: 2.969
+
+Iter: 86000
+D loss: 0.4688
+G_loss: 2.625
+
+Iter: 87000
+D loss: 0.5453
+G_loss: 2.68
+
+Iter: 88000
+D loss: 0.5185
+G_loss: 2.481
+
+Iter: 89000
+D loss: 0.4828
+G_loss: 2.733
+
+Iter: 90000
+D loss: 0.5165
+G_loss: 2.502
+
+Iter: 91000
+D loss: 0.5279
+G_loss: 2.523
+
+Iter: 92000
+D loss: 0.4666
+G_loss: 2.657
+
+Iter: 93000
+D loss: 0.4917
+G_loss: 2.684
+
+Iter: 94000
+D loss: 0.4796
+G_loss: 3.002
+
+Iter: 95000
+D loss: 0.4901
+G_loss: 2.926
+
+Iter: 96000
+D loss: 0.5268
+G_loss: 2.957
+
+Iter: 97000
+D loss: 0.3813
+G_loss: 2.785
+
+Iter: 98000
+D loss: 0.5115
+G_loss: 2.494
+
+Iter: 99000
+D loss: 0.4314
+G_loss: 2.655
+
+Iter: 100000
+D loss: 0.5159
+G_loss: 2.603
+
+Iter: 101000
+D loss: 0.4473
+G_loss: 3.065
+
+Iter: 102000
+D loss: 0.4271
+G_loss: 2.761
+
+Iter: 103000
+D loss: 0.4707
+G_loss: 2.713
+
+Iter: 104000
+D loss: 0.5591
+G_loss: 2.749
+
+Iter: 105000
+D loss: 0.374
+G_loss: 2.798
+
+Iter: 106000
+D loss: 0.537
+G_loss: 2.461
+
+Iter: 107000
+D loss: 0.4594
+G_loss: 2.787
+
+Iter: 108000
+D loss: 0.4308
+G_loss: 2.98
+
+Iter: 109000
+D loss: 0.4282
+G_loss: 2.38
+
+Iter: 110000
+D loss: 0.5919
+G_loss: 2.219
+
+Iter: 111000
+D loss: 0.4232
+G_loss: 2.824
+
+Iter: 112000
+D loss: 0.479
+G_loss: 2.58
+
+Iter: 113000
+D loss: 0.3627
+G_loss: 3.078
+
+Iter: 114000
+D loss: 0.5352
+G_loss: 2.958
+
+Iter: 115000
+D loss: 0.3715
+G_loss: 2.795
+
+Iter: 116000
+D loss: 0.3741
+G_loss: 3.068
+
+Iter: 117000
+D loss: 0.4444
+G_loss: 3.165
+
+Iter: 118000
+D loss: 0.5306
+G_loss: 2.803
+
+Iter: 119000
+D loss: 0.4736
+G_loss: 2.77
+
+Iter: 120000
+D loss: 0.4246
+G_loss: 2.864
+
+Iter: 121000
+D loss: 0.4632
+G_loss: 3.004
+
+Iter: 122000
+D loss: 0.4379
+G_loss: 2.919
+
+Iter: 123000
+D loss: 0.4293
+G_loss: 2.984
+
+Iter: 124000
+D loss: 0.3263
+G_loss: 2.654
+
+Iter: 125000
+D loss: 0.4441
+G_loss: 2.578
+
+Iter: 126000
+D loss: 0.4744
+G_loss: 2.427
+
+Iter: 127000
+D loss: 0.4933
+G_loss: 3.128
+
+Iter: 128000
+D loss: 0.5972
+G_loss: 3.086
+
+Iter: 129000
+D loss: 0.3784
+G_loss: 3.116
+
+Iter: 130000
+D loss: 0.4271
+G_loss: 2.733
+
+Iter: 131000
+D loss: 0.5262
+G_loss: 3.245
+
+Iter: 132000
+D loss: 0.4455
+G_loss: 3.168
+
+Iter: 133000
+D loss: 0.5148
+G_loss: 2.958
+
+Iter: 134000
+D loss: 0.3754
+G_loss: 3.512
+
+Iter: 135000
+D loss: 0.6111
+G_loss: 3.007
+
+Iter: 136000
+D loss: 0.3621
+G_loss: 3.441
+
+Iter: 137000
+D loss: 0.4043
+G_loss: 2.483
+
+Iter: 138000
+D loss: 0.4879
+G_loss: 2.628
+
+Iter: 139000
+D loss: 0.4813
+G_loss: 2.796
+
+Iter: 140000
+D loss: 0.3675
+G_loss: 3.075
+
+Iter: 141000
+D loss: 0.3604
+G_loss: 3.136
+
+Iter: 142000
+D loss: 0.4695
+G_loss: 2.734
+
+Iter: 143000
+D loss: 0.494
+G_loss: 2.906
+
+Iter: 144000
+D loss: 0.297
+G_loss: 2.859
+
+Iter: 145000
+D loss: 0.3916
+G_loss: 2.762
+
+Iter: 146000
+D loss: 0.4554
+G_loss: 2.617
+
+Iter: 147000
+D loss: 0.4243
+G_loss: 2.947
+
+Iter: 148000
+D loss: 0.4362
+G_loss: 2.845
+
+Iter: 149000
+D loss: 0.4047
+G_loss: 2.778
+
+Iter: 150000
+D loss: 0.4203
+G_loss: 3.177
+
+Iter: 151000
+D loss: 0.3991
+G_loss: 2.695
+
+Iter: 152000
+D loss: 0.5077
+G_loss: 3.173
+
+Iter: 153000
+D loss: 0.4712
+G_loss: 3.313
+
+Iter: 154000
+D loss: 0.3699
+G_loss: 3.408
+
+Iter: 155000
+D loss: 0.3985
+G_loss: 3.043
+
+Iter: 156000
+D loss: 0.3734
+G_loss: 3.016
+
+Iter: 157000
+D loss: 0.4471
+G_loss: 2.931
+
+Iter: 158000
+D loss: 0.2993
+G_loss: 3.377
+
+Iter: 159000
+D loss: 0.3248
+G_loss: 2.953
+
+Iter: 160000
+D loss: 0.2768
+G_loss: 2.836
+
+Iter: 161000
+D loss: 0.4279
+G_loss: 3.517
+
+Iter: 162000
+D loss: 0.4608
+G_loss: 2.922
+
+Iter: 163000
+D loss: 0.4014
+G_loss: 2.98
+
+Iter: 164000
+D loss: 0.3805
+G_loss: 2.949
+
+Iter: 165000
+D loss: 0.4389
+G_loss: 2.764
+
+Iter: 166000
+D loss: 0.375
+G_loss: 3.716
+
+Iter: 167000
+D loss: 0.4738
+G_loss: 3.038
+
+Iter: 168000
+D loss: 0.3885
+G_loss: 2.663
+
+Iter: 169000
+D loss: 0.3734
+G_loss: 2.487
+
+Iter: 170000
+D loss: 0.3891
+G_loss: 2.843
+
+Iter: 171000
+D loss: 0.4051
+G_loss: 2.895
+
+Iter: 172000
+D loss: 0.3275
+G_loss: 2.982
+
+Iter: 173000
+D loss: 0.3067
+G_loss: 2.846
+
+Iter: 174000
+D loss: 0.3866
+G_loss: 3.327
+
+Iter: 175000
+D loss: 0.4247
+G_loss: 2.753
+
+Iter: 176000
+D loss: 0.3232
+G_loss: 2.754
+
+Iter: 177000
+D loss: 0.4242
+G_loss: 3.59
+
+Iter: 178000
+D loss: 0.2861
+G_loss: 2.991
+
+Iter: 179000
+D loss: 0.3095
+G_loss: 3.094
+
+Iter: 180000
+D loss: 0.3633
+G_loss: 2.936
+
+Iter: 181000
+D loss: 0.4873
+G_loss: 3.431
+
+Iter: 182000
+D loss: 0.3131
+G_loss: 2.585
+
+Iter: 183000
+D loss: 0.4379
+G_loss: 3.65
+
+Iter: 184000
+D loss: 0.3332
+G_loss: 3.095
+
+Iter: 185000
+D loss: 0.4782
+G_loss: 3.004
+
+Iter: 186000
+D loss: 0.3372
+G_loss: 2.933
+
+Iter: 187000
+D loss: 0.4785
+G_loss: 3.502
+
+Iter: 188000
+D loss: 0.454
+G_loss: 2.691
+
+Iter: 189000
+D loss: 0.3736
+G_loss: 2.558
+
+Iter: 190000
+D loss: 0.4164
+G_loss: 3.688
+
+Iter: 191000
+D loss: 0.4976
+G_loss: 2.691
+
+Iter: 192000
+D loss: 0.3993
+G_loss: 3.428
+
+Iter: 193000
+D loss: 0.3906
+G_loss: 3.177
+
+Iter: 194000
+D loss: 0.3649
+G_loss: 2.88
+
+Iter: 195000
+D loss: 0.2566
+G_loss: 2.801
+
+Iter: 196000
+D loss: 0.4513
+G_loss: 2.903
+
+Iter: 197000
+D loss: 0.3511
+G_loss: 2.902
+
+Iter: 198000
+D loss: 0.3651
+G_loss: 3.704
+
+Iter: 199000
+D loss: 0.3782
+G_loss: 2.793
+
+Iter: 200000
+D loss: 0.3414
+G_loss: 3.196
+
+Iter: 201000
+D loss: 0.4079
+G_loss: 2.936
+
+Iter: 202000
+D loss: 0.2982
+G_loss: 3.547
+
+Iter: 203000
+D loss: 0.3335
+G_loss: 3.14
+
+Iter: 204000
+D loss: 0.3728
+G_loss: 3.192
+
+Iter: 205000
+D loss: 0.3234
+G_loss: 3.057
+
+Iter: 206000
+D loss: 0.3149
+G_loss: 3.194
+
+Iter: 207000
+D loss: 0.3699
+G_loss: 3.051
+
+Iter: 208000
+D loss: 0.3067
+G_loss: 3.417
+
+Iter: 209000
+D loss: 0.3211
+G_loss: 3.306
+
+Iter: 210000
+D loss: 0.2371
+G_loss: 3.136
+
+Iter: 211000
+D loss: 0.3862
+G_loss: 3.177
+
+Iter: 212000
+D loss: 0.4484
+G_loss: 3.075
+
+Iter: 213000
+D loss: 0.4056
+G_loss: 2.672
+
+Iter: 214000
+D loss: 0.4616
+G_loss: 3.035
+
+Iter: 215000
+D loss: 0.37
+G_loss: 2.881
+
+Iter: 216000
+D loss: 0.2413
+G_loss: 3.011
+
+Iter: 217000
+D loss: 0.3479
+G_loss: 3.402
+
+Iter: 218000
+D loss: 0.3311
+G_loss: 2.843
+
+Iter: 219000
+D loss: 0.3667
+G_loss: 3.415
+
+Iter: 220000
+D loss: 0.28
+G_loss: 3.113
+
+Iter: 221000
+D loss: 0.2028
+G_loss: 2.911
+
+Iter: 222000
+D loss: 0.3831
+G_loss: 2.818
+
+Iter: 223000
+D loss: 0.2602
+G_loss: 3.063
+
+Iter: 224000
+D loss: 0.2883
+G_loss: 3.19
+
+Iter: 225000
+D loss: 0.5021
+G_loss: 2.725
+
+Iter: 226000
+D loss: 0.3187
+G_loss: 3.09
+
+Iter: 227000
+D loss: 0.3149
+G_loss: 3.302
+
+Iter: 228000
+D loss: 0.3626
+G_loss: 3.0
+
+Iter: 229000
+D loss: 0.3379
+G_loss: 3.101
+
+Iter: 230000
+D loss: 0.4081
+G_loss: 3.149
+
+Iter: 231000
+D loss: 0.2799
+G_loss: 3.101
+
+Iter: 232000
+D loss: 0.4044
+G_loss: 2.799
+
+Iter: 233000
+D loss: 0.3534
+G_loss: 2.977
+
+Iter: 234000
+D loss: 0.4091
+G_loss: 3.403
+
+Iter: 235000
+D loss: 0.2864
+G_loss: 2.863
+
+Iter: 236000
+D loss: 0.2828
+G_loss: 2.941
+
+Iter: 237000
+D loss: 0.3578
+G_loss: 3.136
+
+Iter: 238000
+D loss: 0.3601
+G_loss: 3.488
+
+Iter: 239000
+D loss: 0.3189
+G_loss: 3.768
+
+Iter: 240000
+D loss: 0.2678
+G_loss: 3.329
+
+Iter: 241000
+D loss: 0.3005
+G_loss: 3.179
+
+Iter: 242000
+D loss: 0.3671
+G_loss: 3.492
+
+Iter: 243000
+D loss: 0.3513
+G_loss: 3.363
+
+Iter: 244000
+D loss: 0.3869
+G_loss: 3.108
+
+Iter: 245000
+D loss: 0.2662
+G_loss: 2.92
+
+Iter: 246000
+D loss: 0.2801
+G_loss: 3.291
+
+Iter: 247000
+D loss: 0.3275
+G_loss: 3.042
+
+Iter: 248000
+D loss: 0.2576
+G_loss: 2.836
+
+Iter: 249000
+D loss: 0.1936
+G_loss: 3.39
+
+Iter: 250000
+D loss: 0.3718
+G_loss: 3.37
+
+Iter: 251000
+D loss: 0.3203
+G_loss: 3.248
+
+Iter: 252000
+D loss: 0.3523
+G_loss: 3.093
+
+Iter: 253000
+D loss: 0.329
+G_loss: 2.593
+
+Iter: 254000
+D loss: 0.4474
+G_loss: 3.219
+
+Iter: 255000
+D loss: 0.4039
+G_loss: 2.948
+
+Iter: 256000
+D loss: 0.2744
+G_loss: 3.314
+
+Iter: 257000
+D loss: 0.2832
+G_loss: 3.273
+
+Iter: 258000
+D loss: 0.3337
+G_loss: 3.42
+
+Iter: 259000
+D loss: 0.3864
+G_loss: 3.099
+
+Iter: 260000
+D loss: 0.3343
+G_loss: 3.164
+
+Iter: 261000
+D loss: 0.2568
+G_loss: 3.115
+
+Iter: 262000
+D loss: 0.2935
+G_loss: 3.504
+
+Iter: 263000
+D loss: 0.2183
+G_loss: 3.028
+
+Iter: 264000
+D loss: 0.1993
+G_loss: 3.249
+
+Iter: 265000
+D loss: 0.316
+G_loss: 3.511
+
+Iter: 266000
+D loss: 0.2728
+G_loss: 3.432
+
+Iter: 267000
+D loss: 0.3333
+G_loss: 3.629
+
+Iter: 268000
+D loss: 0.3838
+G_loss: 3.256
+
+Iter: 269000
+D loss: 0.2615
+G_loss: 3.521
+
+Iter: 270000
+D loss: 0.2313
+G_loss: 3.634
+
+Iter: 271000
+D loss: 0.3044
+G_loss: 3.233
+
+Iter: 272000
+D loss: 0.282
+G_loss: 2.859
+
+Iter: 273000
+D loss: 0.3811
+G_loss: 3.285
+
+Iter: 274000
+D loss: 0.3733
+G_loss: 3.475
+
+Iter: 275000
+D loss: 0.3983
+G_loss: 3.474
+
+Iter: 276000
+D loss: 0.3648
+G_loss: 3.399
+
+Iter: 277000
+D loss: 0.2264
+G_loss: 3.076
+
+Iter: 278000
+D loss: 0.3018
+G_loss: 3.019
+
+Iter: 279000
+D loss: 0.2273
+G_loss: 3.142
+
+Iter: 280000
+D loss: 0.2148
+G_loss: 3.345
+
+Iter: 281000
+D loss: 0.306
+G_loss: 3.57
+
+Iter: 282000
+D loss: 0.391
+G_loss: 3.446
+
+Iter: 283000
+D loss: 0.2367
+G_loss: 2.895
+
+Iter: 284000
+D loss: 0.238
+G_loss: 3.287
+
+Iter: 285000
+D loss: 0.2594
+G_loss: 3.643
+
+Iter: 286000
+D loss: 0.2239
+G_loss: 3.335
+
+Iter: 287000
+D loss: 0.2701
+G_loss: 3.356
+
+Iter: 288000
+D loss: 0.2938
+G_loss: 3.292
+
+Iter: 289000
+D loss: 0.3787
+G_loss: 3.336
+
+Iter: 290000
+D loss: 0.2784
+G_loss: 3.161
+
+Iter: 291000
+D loss: 0.255
+G_loss: 3.167
+
+Iter: 292000
+D loss: 0.3758
+G_loss: 2.84
+
+Iter: 293000
+D loss: 0.37
+G_loss: 3.404
+
+Iter: 294000
+D loss: 0.3214
+G_loss: 3.196
+
+Iter: 295000
+D loss: 0.2938
+G_loss: 3.348
+
+Iter: 296000
+D loss: 0.2212
+G_loss: 3.63
+
+Iter: 297000
+D loss: 0.2926
+G_loss: 3.329
+
+Iter: 298000
+D loss: 0.3535
+G_loss: 3.827
+
+Iter: 299000
+D loss: 0.3342
+G_loss: 3.227
+
+Iter: 300000
+D loss: 0.3574
+G_loss: 3.082
+
+Iter: 301000
+D loss: 0.2481
+G_loss: 3.371
+
+Iter: 302000
+D loss: 0.2755
+G_loss: 3.183
+
+Iter: 303000
+D loss: 0.3285
+G_loss: 3.276
+
+Iter: 304000
+D loss: 0.3201
+G_loss: 3.096
+
+Iter: 305000
+D loss: 0.2623
+G_loss: 2.976
+
+Iter: 306000
+D loss: 0.2885
+G_loss: 3.376
+
+Iter: 307000
+D loss: 0.2692
+G_loss: 3.299
+
+Iter: 308000
+D loss: 0.3059
+G_loss: 3.015
+
+Iter: 309000
+D loss: 0.3128
+G_loss: 3.452
+
+Iter: 310000
+D loss: 0.3591
+G_loss: 3.27
+
+Iter: 311000
+D loss: 0.2933
+G_loss: 2.838
+
+Iter: 312000
+D loss: 0.3451
+G_loss: 3.543
+
+Iter: 313000
+D loss: 0.2015
+G_loss: 3.738
+
+Iter: 314000
+D loss: 0.3086
+G_loss: 3.202
+
+Iter: 315000
+D loss: 0.349
+G_loss: 3.012
+
+Iter: 316000
+D loss: 0.2295
+G_loss: 3.609
+
+Iter: 317000
+D loss: 0.2641
+G_loss: 3.102
+
+Iter: 318000
+D loss: 0.2443
+G_loss: 3.08
+
+Iter: 319000
+D loss: 0.2256
+G_loss: 3.465
+
+Iter: 320000
+D loss: 0.2677
+G_loss: 2.829
+
+Iter: 321000
+D loss: 0.2607
+G_loss: 3.25
+
+Iter: 322000
+D loss: 0.2415
+G_loss: 3.293
+
+Iter: 323000
+D loss: 0.1719
+G_loss: 2.923
+
+Iter: 324000
+D loss: 0.2409
+G_loss: 3.316
+
+Iter: 325000
+D loss: 0.2687
+G_loss: 3.083
+
+Iter: 326000
+D loss: 0.2429
+G_loss: 3.294
+
+Iter: 327000
+D loss: 0.3185
+G_loss: 3.261
+
+Iter: 328000
+D loss: 0.1815
+G_loss: 3.789
+
+Iter: 329000
+D loss: 0.2766
+G_loss: 3.617
+
+Iter: 330000
+D loss: 0.2143
+G_loss: 3.352
+
+Iter: 331000
+D loss: 0.1899
+G_loss: 3.861
+
+Iter: 332000
+D loss: 0.4161
+G_loss: 3.471
+
+Iter: 333000
+D loss: 0.3828
+G_loss: 3.504
+
+Iter: 334000
+D loss: 0.2401
+G_loss: 3.313
+
+Iter: 335000
+D loss: 0.3614
+G_loss: 3.513
+
+Iter: 336000
+D loss: 0.2675
+G_loss: 3.402
+
+Iter: 337000
+D loss: 0.2785
+G_loss: 2.786
+
+Iter: 338000
+D loss: 0.2918
+G_loss: 2.951
+
+Iter: 339000
+D loss: 0.2347
+G_loss: 2.968
+
+Iter: 340000
+D loss: 0.1756
+G_loss: 3.713
+
+Iter: 341000
+D loss: 0.3357
+G_loss: 3.692
+
+Iter: 342000
+D loss: 0.3435
+G_loss: 3.073
+
+Iter: 343000
+D loss: 0.1246
+G_loss: 3.46
+
+Iter: 344000
+D loss: 0.2524
+G_loss: 3.18
+
+Iter: 345000
+D loss: 0.2256
+G_loss: 3.198
+
+Iter: 346000
+D loss: 0.2333
+G_loss: 3.261
+
+Iter: 347000
+D loss: 0.2552
+G_loss: 3.333
+
+Iter: 348000
+D loss: 0.1611
+G_loss: 3.001
+
+Iter: 349000
+D loss: 0.2322
+G_loss: 3.738
+
+Iter: 350000
+D loss: 0.2347
+G_loss: 3.401
+
+Iter: 351000
+D loss: 0.3267
+G_loss: 3.049
+
+Iter: 352000
+D loss: 0.3268
+G_loss: 3.566
+
+Iter: 353000
+D loss: 0.24
+G_loss: 2.973
+
+Iter: 354000
+D loss: 0.2541
+G_loss: 3.215
+
+Iter: 355000
+D loss: 0.179
+G_loss: 3.005
+
+Iter: 356000
+D loss: 0.2046
+G_loss: 3.076
+
+Iter: 357000
+D loss: 0.3428
+G_loss: 3.117
+
+Iter: 358000
+D loss: 0.2142
+G_loss: 3.252
+
+Iter: 359000
+D loss: 0.2211
+G_loss: 3.329
+
+Iter: 360000
+D loss: 0.2542
+G_loss: 2.939
+
+Iter: 361000
+D loss: 0.2588
+G_loss: 2.908
+
+Iter: 362000
+D loss: 0.3454
+G_loss: 3.011
+
+Iter: 363000
+D loss: 0.2265
+G_loss: 3.087
+
+Iter: 364000
+D loss: 0.2378
+G_loss: 2.881
+
+Iter: 365000
+D loss: 0.2436
+G_loss: 3.101
+
+Iter: 366000
+D loss: 0.2719
+G_loss: 3.573
+
+Iter: 367000
+D loss: 0.3389
+G_loss: 3.448
+
+Iter: 368000
+D loss: 0.2645
+G_loss: 3.538
+
+Iter: 369000
+D loss: 0.175
+G_loss: 3.085
+
+Iter: 370000
+D loss: 0.246
+G_loss: 3.252
+
+Iter: 371000
+D loss: 0.2578
+G_loss: 3.008
+
+Iter: 372000
+D loss: 0.2731
+G_loss: 2.578
+
+Iter: 373000
+D loss: 0.1946
+G_loss: 3.245
+
+Iter: 374000
+D loss: 0.242
+G_loss: 3.316
+
+Iter: 375000
+D loss: 0.4043
+G_loss: 3.164
+
+Iter: 376000
+D loss: 0.2164
+G_loss: 3.027
+
+Iter: 377000
+D loss: 0.2307
+G_loss: 3.377
+
+Iter: 378000
+D loss: 0.3298
+G_loss: 3.316
+
+Iter: 379000
+D loss: 0.2137
+G_loss: 3.018
+
+Iter: 380000
+D loss: 0.2274
+G_loss: 3.225
+
+Iter: 381000
+D loss: 0.2159
+G_loss: 2.886
+
+Iter: 382000
+D loss: 0.3192
+G_loss: 3.596
+
+Iter: 383000
+D loss: 0.1368
+G_loss: 3.543
+
+Iter: 384000
+D loss: 0.2529
+G_loss: 2.896
+
+Iter: 385000
+D loss: 0.2107
+G_loss: 2.973
+
+Iter: 386000
+D loss: 0.2546
+G_loss: 3.737
+
+Iter: 387000
+D loss: 0.278
+G_loss: 3.368
+
+Iter: 388000
+D loss: 0.1732
+G_loss: 3.101
+
+Iter: 389000
+D loss: 0.2746
+G_loss: 3.707
+
+Iter: 390000
+D loss: 0.2317
+G_loss: 3.091
+
+Iter: 391000
+D loss: 0.2296
+G_loss: 3.241
+
+Iter: 392000
+D loss: 0.2186
+G_loss: 3.325
+
+Iter: 393000
+D loss: 0.3154
+G_loss: 3.385
+
+Iter: 394000
+D loss: 0.3212
+G_loss: 2.976
+
+Iter: 395000
+D loss: 0.1849
+G_loss: 3.161
+
+Iter: 396000
+D loss: 0.2507
+G_loss: 3.53
+
+Iter: 397000
+D loss: 0.26
+G_loss: 3.194
+
+Iter: 398000
+D loss: 0.2387
+G_loss: 3.451
+
+Iter: 399000
+D loss: 0.3049
+G_loss: 3.24
+
+Iter: 400000
+D loss: 0.3544
+G_loss: 3.204
+
+Iter: 401000
+D loss: 0.2394
+G_loss: 2.761
+
+Iter: 402000
+D loss: 0.2589
+G_loss: 3.274
+
+Iter: 403000
+D loss: 0.2815
+G_loss: 3.459
+
+Iter: 404000
+D loss: 0.1946
+G_loss: 3.267
+
+Iter: 405000
+D loss: 0.1806
+G_loss: 3.346
+
+Iter: 406000
+D loss: 0.3279
+G_loss: 3.136
+
+Iter: 407000
+D loss: 0.2497
+G_loss: 2.929
+
+Iter: 408000
+D loss: 0.3679
+G_loss: 3.079
+
+Iter: 409000
+D loss: 0.1857
+G_loss: 3.265
+
+Iter: 410000
+D loss: 0.1608
+G_loss: 3.545
+
+Iter: 411000
+D loss: 0.156
+G_loss: 3.455
+
+Iter: 412000
+D loss: 0.2484
+G_loss: 3.234
+
+Iter: 413000
+D loss: 0.2766
+G_loss: 3.137
+
+Iter: 414000
+D loss: 0.2336
+G_loss: 3.454
+
+Iter: 415000
+D loss: 0.2446
+G_loss: 3.592
+
+Iter: 416000
+D loss: 0.2491
+G_loss: 3.33
+
+Iter: 417000
+D loss: 0.2119
+G_loss: 3.8
+
+Iter: 418000
+D loss: 0.141
+G_loss: 3.358
+
+Iter: 419000
+D loss: 0.1902
+G_loss: 3.25
+
+Iter: 420000
+D loss: 0.2728
+G_loss: 3.362
+
+Iter: 421000
+D loss: 0.1855
+G_loss: 3.3
+
+Iter: 422000
+D loss: 0.1833
+G_loss: 3.554
+
+Iter: 423000
+D loss: 0.1754
+G_loss: 3.456
+
+Iter: 424000
+D loss: 0.3502
+G_loss: 3.641
+
+Iter: 425000
+D loss: 0.2138
+G_loss: 3.485
+
+Iter: 426000
+D loss: 0.276
+G_loss: 3.089
+
+Iter: 427000
+D loss: 0.256
+G_loss: 3.309
+
+Iter: 428000
+D loss: 0.2563
+G_loss: 3.337
+
+Iter: 429000
+D loss: 0.2267
+G_loss: 2.943
+
+Iter: 430000
+D loss: 0.165
+G_loss: 3.432
+
+Iter: 431000
+D loss: 0.2137
+G_loss: 3.182
+
+Iter: 432000
+D loss: 0.3425
+G_loss: 3.881
+
+Iter: 433000
+D loss: 0.17
+G_loss: 3.453
+
+Iter: 434000
+D loss: 0.195
+G_loss: 3.537
+
+Iter: 435000
+D loss: 0.2138
+G_loss: 3.528
+
+Iter: 436000
+D loss: 0.2543
+G_loss: 2.94
+
+Iter: 437000
+D loss: 0.266
+G_loss: 3.678
+
+Iter: 438000
+D loss: 0.2563
+G_loss: 3.137
+
+Iter: 439000
+D loss: 0.3248
+G_loss: 2.94
+
+Iter: 440000
+D loss: 0.2277
+G_loss: 3.211
+
+Iter: 441000
+D loss: 0.1954
+G_loss: 3.28
+
+Iter: 442000
+D loss: 0.3624
+G_loss: 3.08
+
+Iter: 443000
+D loss: 0.275
+G_loss: 3.214
+
+Iter: 444000
+D loss: 0.2379
+G_loss: 2.994
+
+Iter: 445000
+D loss: 0.119
+G_loss: 3.542
+
+Iter: 446000
+D loss: 0.2694
+G_loss: 3.133
+
+Iter: 447000
+D loss: 0.1389
+G_loss: 3.443
+
+Iter: 448000
+D loss: 0.1348
+G_loss: 3.01
+
+Iter: 449000
+D loss: 0.2727
+G_loss: 3.631
+
+Iter: 450000
+D loss: 0.1755
+G_loss: 3.057
+
+Iter: 451000
+D loss: 0.2406
+G_loss: 3.238
+
+Iter: 452000
+D loss: 0.2623
+G_loss: 3.112
+
+Iter: 453000
+D loss: 0.2081
+G_loss: 3.573
+
+Iter: 454000
+D loss: 0.1201
+G_loss: 3.782
+
+Iter: 455000
+D loss: 0.1667
+G_loss: 3.573
+
+Iter: 456000
+D loss: 0.2713
+G_loss: 3.65
+
+Iter: 457000
+D loss: 0.3062
+G_loss: 3.023
+
+Iter: 458000
+D loss: 0.1882
+G_loss: 3.266
+
+Iter: 459000
+D loss: 0.2356
+G_loss: 3.372
+
+Iter: 460000
+D loss: 0.1954
+G_loss: 3.282
+
+Iter: 461000
+D loss: 0.3063
+G_loss: 3.467
+
+Iter: 462000
+D loss: 0.207
+G_loss: 3.086
+
+Iter: 463000
+D loss: 0.2676
+G_loss: 3.201
+
+Iter: 464000
+D loss: 0.1978
+G_loss: 3.451
+
+Iter: 465000
+D loss: 0.2596
+G_loss: 3.46
+
+Iter: 466000
+D loss: 0.2138
+G_loss: 3.761
+
+Iter: 467000
+D loss: 0.222
+G_loss: 2.879
+
+Iter: 468000
+D loss: 0.2154
+G_loss: 3.863
+
+Iter: 469000
+D loss: 0.3125
+G_loss: 3.701
+
+Iter: 470000
+D loss: 0.1847
+G_loss: 3.738
+
+Iter: 471000
+D loss: 0.3495
+G_loss: 3.337
+
+Iter: 472000
+D loss: 0.2575
+G_loss: 3.258
+
+Iter: 473000
+D loss: 0.1459
+G_loss: 3.544
+
+Iter: 474000
+D loss: 0.2068
+G_loss: 3.343
+
+Iter: 475000
+D loss: 0.1691
+G_loss: 3.098
+
+Iter: 476000
+D loss: 0.2846
+G_loss: 3.463
+
+Iter: 477000
+D loss: 0.3107
+G_loss: 3.283
+
+Iter: 478000
+D loss: 0.1733
+G_loss: 3.534
+
+Iter: 479000
+D loss: 0.2003
+G_loss: 3.308
+
+Iter: 480000
+D loss: 0.2474
+G_loss: 3.576
+
+Iter: 481000
+D loss: 0.1143
+G_loss: 3.235
+
+Iter: 482000
+D loss: 0.2654
+G_loss: 3.476
+
+Iter: 483000
+D loss: 0.3623
+G_loss: 3.659
+
+Iter: 484000
+D loss: 0.1534
+G_loss: 3.597
+
+Iter: 485000
+D loss: 0.3128
+G_loss: 3.81
+
+Iter: 486000
+D loss: 0.2489
+G_loss: 3.701
+
+Iter: 487000
+D loss: 0.2454
+G_loss: 3.453
+
+Iter: 488000
+D loss: 0.3193
+G_loss: 2.928
+
+Iter: 489000
+D loss: 0.1574
+G_loss: 3.213
+
+Iter: 490000
+D loss: 0.1742
+G_loss: 3.471
+
+Iter: 491000
+D loss: 0.1801
+G_loss: 3.587
+
+Iter: 492000
+D loss: 0.2232
+G_loss: 3.316
+
+Iter: 493000
+D loss: 0.2365
+G_loss: 3.043
+
+Iter: 494000
+D loss: 0.2786
+G_loss: 2.646
+
+Iter: 495000
+D loss: 0.251
+G_loss: 3.462
+
+Iter: 496000
+D loss: 0.2258
+G_loss: 3.743
+
+Iter: 497000
+D loss: 0.2587
+G_loss: 3.157
+
+Iter: 498000
+D loss: 0.2206
+G_loss: 3.318
+
+Iter: 499000
+D loss: 0.2541
+G_loss: 3.6
+
+Iter: 500000
+D loss: 0.1549
+G_loss: 3.894
+
+Iter: 501000
+D loss: 0.1891
+G_loss: 3.501
+
+Iter: 502000
+D loss: 0.2636
+G_loss: 3.937
+
+Iter: 503000
+D loss: 0.1902
+G_loss: 3.433
+
+Iter: 504000
+D loss: 0.2939
+G_loss: 3.414
+
+Iter: 505000
+D loss: 0.1606
+G_loss: 3.435
+
+Iter: 506000
+D loss: 0.1501
+G_loss: 3.671
+
+Iter: 507000
+D loss: 0.2381
+G_loss: 3.165
+
+Iter: 508000
+D loss: 0.2556
+G_loss: 3.636
+
+Iter: 509000
+D loss: 0.2186
+G_loss: 3.547
+
+Iter: 510000
+D loss: 0.206
+G_loss: 3.434
+
+Iter: 511000
+D loss: 0.1834
+G_loss: 3.573
+
+Iter: 512000
+D loss: 0.1778
+G_loss: 3.301
+
+Iter: 513000
+D loss: 0.188
+G_loss: 3.045
+
+Iter: 514000
+D loss: 0.2002
+G_loss: 3.54
+
+Iter: 515000
+D loss: 0.09866
+G_loss: 4.015
+
+Iter: 516000
+D loss: 0.1392
+G_loss: 3.647
+
+Iter: 517000
+D loss: 0.1797
+G_loss: 3.747
+
+Iter: 518000
+D loss: 0.2989
+G_loss: 3.3
+
+Iter: 519000
+D loss: 0.2192
+G_loss: 3.059
+
+Iter: 520000
+D loss: 0.1418
+G_loss: 3.277
+
+Iter: 521000
+D loss: 0.192
+G_loss: 3.413
+
+Iter: 522000
+D loss: 0.1424
+G_loss: 3.48
+
+Iter: 523000
+D loss: 0.1622
+G_loss: 3.373
+
+Iter: 524000
+D loss: 0.2913
+G_loss: 3.686
+
+Iter: 525000
+D loss: 0.2012
+G_loss: 3.207
+
+Iter: 526000
+D loss: 0.1858
+G_loss: 3.825
+
+Iter: 527000
+D loss: 0.1955
+G_loss: 3.341
+
+Iter: 528000
+D loss: 0.233
+G_loss: 3.442
+
+Iter: 529000
+D loss: 0.1462
+G_loss: 3.254
+
+Iter: 530000
+D loss: 0.1506
+G_loss: 3.446
+
+Iter: 531000
+D loss: 0.1762
+G_loss: 3.063
+
+Iter: 532000
+D loss: 0.1592
+G_loss: 3.652
+
+Iter: 533000
+D loss: 0.1732
+G_loss: 3.855
+
+Iter: 534000
+D loss: 0.2015
+G_loss: 3.034
+
+Iter: 535000
+D loss: 0.2766
+G_loss: 3.241
+
+Iter: 536000
+D loss: 0.107
+G_loss: 4.242
+
+Iter: 537000
+D loss: 0.1444
+G_loss: 3.672
+
+Iter: 538000
+D loss: 0.2477
+G_loss: 3.77
+
+Iter: 539000
+D loss: 0.1981
+G_loss: 3.321
+
+Iter: 540000
+D loss: 0.2408
+G_loss: 3.754
+
+Iter: 541000
+D loss: 0.1244
+G_loss: 3.311
+
+Iter: 542000
+D loss: 0.1257
+G_loss: 3.597
+
+Iter: 543000
+D loss: 0.1554
+G_loss: 3.837
+
+Iter: 544000
+D loss: 0.1553
+G_loss: 3.39
+
+Iter: 545000
+D loss: 0.232
+G_loss: 3.601
+
+Iter: 546000
+D loss: 0.2144
+G_loss: 4.054
+
+Iter: 547000
+D loss: 0.1919
+G_loss: 3.746
+
+Iter: 548000
+D loss: 0.276
+G_loss: 3.377
+
+Iter: 549000
+D loss: 0.2043
+G_loss: 3.281
+
+Iter: 550000
+D loss: 0.1618
+G_loss: 3.571
+
+Iter: 551000
+D loss: 0.1989
+G_loss: 3.383
+
+Iter: 552000
+D loss: 0.213
+G_loss: 3.069
+
+Iter: 553000
+D loss: 0.2262
+G_loss: 3.987
+
+Iter: 554000
+D loss: 0.2309
+G_loss: 3.658
+
+Iter: 555000
+D loss: 0.311
+G_loss: 4.131
+
+Iter: 556000
+D loss: 0.1577
+G_loss: 3.381
+
+Iter: 557000
+D loss: 0.1634
+G_loss: 3.216
+
+Iter: 558000
+D loss: 0.1503
+G_loss: 3.902
+
+Iter: 559000
+D loss: 0.2778
+G_loss: 3.416
+
+Iter: 560000
+D loss: 0.1447
+G_loss: 3.433
+
+Iter: 561000
+D loss: 0.2756
+G_loss: 3.593
+
+Iter: 562000
+D loss: 0.1825
+G_loss: 3.622
+
+Iter: 563000
+D loss: 0.1349
+G_loss: 3.608
+
+Iter: 564000
+D loss: 0.1768
+G_loss: 3.97
+
+Iter: 565000
+D loss: 0.1139
+G_loss: 3.666
+
+Iter: 566000
+D loss: 0.3213
+G_loss: 3.626
+
+Iter: 567000
+D loss: 0.1609
+G_loss: 3.648
+
+Iter: 568000
+D loss: 0.2308
+G_loss: 3.068
+
+Iter: 569000
+D loss: 0.1282
+G_loss: 3.725
+
+Iter: 570000
+D loss: 0.1282
+G_loss: 3.792
+
+Iter: 571000
+D loss: 0.283
+G_loss: 3.725
+
+Iter: 572000
+D loss: 0.1562
+G_loss: 3.608
+
+Iter: 573000
+D loss: 0.2733
+G_loss: 2.824
+
+Iter: 574000
+D loss: 0.1906
+G_loss: 3.87
+
+Iter: 575000
+D loss: 0.2236
+G_loss: 3.436
+
+Iter: 576000
+D loss: 0.3861
+G_loss: 3.752
+
+Iter: 577000
+D loss: 0.2441
+G_loss: 4.108
+
+Iter: 578000
+D loss: 0.1763
+G_loss: 3.523
+
+Iter: 579000
+D loss: 0.2285
+G_loss: 3.493
+
+Iter: 580000
+D loss: 0.2245
+G_loss: 3.626
+
+Iter: 581000
+D loss: 0.1848
+G_loss: 3.487
+
+Iter: 582000
+D loss: 0.3174
+G_loss: 3.345
+
+Iter: 583000
+D loss: 0.2151
+G_loss: 3.629
+
+Iter: 584000
+D loss: 0.212
+G_loss: 3.285
+
+Iter: 585000
+D loss: 0.2344
+G_loss: 3.02
+
+Iter: 586000
+D loss: 0.1904
+G_loss: 3.317
+
+Iter: 587000
+D loss: 0.1579
+G_loss: 3.775
+
+Iter: 588000
+D loss: 0.1355
+G_loss: 3.443
+
+Iter: 589000
+D loss: 0.1394
+G_loss: 3.746
+
+Iter: 590000
+D loss: 0.1876
+G_loss: 4.042
+
+Iter: 591000
+D loss: 0.2929
+G_loss: 3.435
+
+Iter: 592000
+D loss: 0.1557
+G_loss: 3.54
+
+Iter: 593000
+D loss: 0.2567
+G_loss: 3.294
+
+Iter: 594000
+D loss: 0.105
+G_loss: 3.514
+
+Iter: 595000
+D loss: 0.1585
+G_loss: 3.514
+
+Iter: 596000
+D loss: 0.1501
+G_loss: 3.534
+
+Iter: 597000
+D loss: 0.2594
+G_loss: 4.188
+
+Iter: 598000
+D loss: 0.1801
+G_loss: 3.564
+
+Iter: 599000
+D loss: 0.2136
+G_loss: 3.654
+
+Iter: 600000
+D loss: 0.2212
+G_loss: 3.274
+
+Iter: 601000
+D loss: 0.2151
+G_loss: 3.77
+
+Iter: 602000
+D loss: 0.1519
+G_loss: 3.816
+
+Iter: 603000
+D loss: 0.231
+G_loss: 3.852
+
+Iter: 604000
+D loss: 0.155
+G_loss: 3.502
+
+Iter: 605000
+D loss: 0.1571
+G_loss: 3.647
+
+Iter: 606000
+D loss: 0.1117
+G_loss: 3.518
+
+Iter: 607000
+D loss: 0.2092
+G_loss: 3.873
+
+Iter: 608000
+D loss: 0.2853
+G_loss: 3.852
+
+Iter: 609000
+D loss: 0.1957
+G_loss: 4.022
+
+Iter: 610000
+D loss: 0.1722
+G_loss: 3.71
+
+Iter: 611000
+D loss: 0.1933
+G_loss: 3.579
+
+Iter: 612000
+D loss: 0.1744
+G_loss: 4.171
+
+Iter: 613000
+D loss: 0.1043
+G_loss: 3.769
+
+Iter: 614000
+D loss: 0.158
+G_loss: 4.062
+
+Iter: 615000
+D loss: 0.1421
+G_loss: 3.352
+
+Iter: 616000
+D loss: 0.2814
+G_loss: 3.492
+
+Iter: 617000
+D loss: 0.2011
+G_loss: 3.432
+
+Iter: 618000
+D loss: 0.1962
+G_loss: 3.635
+
+Iter: 619000
+D loss: 0.1905
+G_loss: 4.08
+
+Iter: 620000
+D loss: 0.1979
+G_loss: 4.281
+
+Iter: 621000
+D loss: 0.133
+G_loss: 3.858
+
+Iter: 622000
+D loss: 0.1293
+G_loss: 3.702
+
+Iter: 623000
+D loss: 0.2298
+G_loss: 3.843
+
+Iter: 624000
+D loss: 0.07945
+G_loss: 3.637
+
+Iter: 625000
+D loss: 0.1794
+G_loss: 3.172
+
+Iter: 626000
+D loss: 0.2518
+G_loss: 2.903
+
+Iter: 627000
+D loss: 0.3241
+G_loss: 3.708
+
+Iter: 628000
+D loss: 0.1105
+G_loss: 3.713
+
+Iter: 629000
+D loss: 0.2155
+G_loss: 4.163
+
+Iter: 630000
+D loss: 0.2363
+G_loss: 3.698
+
+Iter: 631000
+D loss: 0.1372
+G_loss: 3.726
+
+Iter: 632000
+D loss: 0.2419
+G_loss: 3.5
+
+Iter: 633000
+D loss: 0.2136
+G_loss: 3.151
+
+Iter: 634000
+D loss: 0.1956
+G_loss: 3.673
+
+Iter: 635000
+D loss: 0.1372
+G_loss: 4.073
+
+Iter: 636000
+D loss: 0.1565
+G_loss: 3.905
+
+Iter: 637000
+D loss: 0.2558
+G_loss: 4.287
+
+Iter: 638000
+D loss: 0.2501
+G_loss: 3.981
+
+Iter: 639000
+D loss: 0.1231
+G_loss: 3.691
+
+Iter: 640000
+D loss: 0.1501
+G_loss: 3.559
+
+Iter: 641000
+D loss: 0.2939
+G_loss: 3.333
+
+Iter: 642000
+D loss: 0.1011
+G_loss: 3.966
+
+Iter: 643000
+D loss: 0.2893
+G_loss: 3.14
+
+Iter: 644000
+D loss: 0.2001
+G_loss: 3.46
+
+Iter: 645000
+D loss: 0.1519
+G_loss: 4.55
+
+Iter: 646000
+D loss: 0.1198
+G_loss: 3.735
+
+Iter: 647000
+D loss: 0.2934
+G_loss: 4.042
+
+Iter: 648000
+D loss: 0.1046
+G_loss: 3.398
+
+Iter: 649000
+D loss: 0.1892
+G_loss: 4.09
+
+Iter: 650000
+D loss: 0.2683
+G_loss: 3.596
+
+Iter: 651000
+D loss: 0.206
+G_loss: 3.277
+
+Iter: 652000
+D loss: 0.1269
+G_loss: 3.503
+
+Iter: 653000
+D loss: 0.197
+G_loss: 3.73
+
+Iter: 654000
+D loss: 0.1237
+G_loss: 3.98
+
+Iter: 655000
+D loss: 0.1757
+G_loss: 3.766
+
+Iter: 656000
+D loss: 0.1664
+G_loss: 3.741
+
+Iter: 657000
+D loss: 0.2215
+G_loss: 3.864
+
+Iter: 658000
+D loss: 0.2605
+G_loss: 3.55
+
+Iter: 659000
+D loss: 0.1766
+G_loss: 4.041
+
+Iter: 660000
+D loss: 0.08652
+G_loss: 3.6
+
+Iter: 661000
+D loss: 0.2408
+G_loss: 3.642
+
+Iter: 662000
+D loss: 0.1647
+G_loss: 3.8
+
+Iter: 663000
+D loss: 0.1573
+G_loss: 3.462
+
+Iter: 664000
+D loss: 0.202
+G_loss: 3.416
+
+Iter: 665000
+D loss: 0.1561
+G_loss: 3.461
+
+Iter: 666000
+D loss: 0.1624
+G_loss: 3.731
+
+Iter: 667000
+D loss: 0.1929
+G_loss: 4.035
+
+Iter: 668000
+D loss: 0.1695
+G_loss: 3.702
+
+Iter: 669000
+D loss: 0.3575
+G_loss: 3.776
+
+Iter: 670000
+D loss: 0.2361
+G_loss: 3.607
+
+Iter: 671000
+D loss: 0.2492
+G_loss: 4.176
+
+Iter: 672000
+D loss: 0.1085
+G_loss: 3.883
+
+Iter: 673000
+D loss: 0.2744
+G_loss: 3.493
+
+Iter: 674000
+D loss: 0.1605
+G_loss: 3.755
+
+Iter: 675000
+D loss: 0.2763
+G_loss: 3.319
+
+Iter: 676000
+D loss: 0.102
+G_loss: 3.773
+
+Iter: 677000
+D loss: 0.3857
+G_loss: 3.963
+
+Iter: 678000
+D loss: 0.1156
+G_loss: 3.682
+
+Iter: 679000
+D loss: 0.163
+G_loss: 3.363
+
+Iter: 680000
+D loss: 0.1602
+G_loss: 4.018
+
+Iter: 681000
+D loss: 0.1791
+G_loss: 4.393
+
+Iter: 682000
+D loss: 0.1797
+G_loss: 3.959
+
+Iter: 683000
+D loss: 0.2734
+G_loss: 3.732
+
+Iter: 684000
+D loss: 0.186
+G_loss: 3.057
+
+Iter: 685000
+D loss: 0.1437
+G_loss: 3.883
+
+Iter: 686000
+D loss: 0.2073
+G_loss: 3.861
+
+Iter: 687000
+D loss: 0.1111
+G_loss: 3.8
+
+Iter: 688000
+D loss: 0.05844
+G_loss: 3.824
+
+Iter: 689000
+D loss: 0.2067
+G_loss: 3.918
+
+Iter: 690000
+D loss: 0.1336
+G_loss: 3.53
+
+Iter: 691000
+D loss: 0.1364
+G_loss: 3.693
+
+Iter: 692000
+D loss: 0.1936
+G_loss: 3.446
+
+Iter: 693000
+D loss: 0.1307
+G_loss: 4.073
+
+Iter: 694000
+D loss: 0.1621
+G_loss: 4.158
+
+Iter: 695000
+D loss: 0.1926
+G_loss: 3.868
+
+Iter: 696000
+D loss: 0.1636
+G_loss: 3.705
+
+Iter: 697000
+D loss: 0.1652
+G_loss: 3.864
+
+Iter: 698000
+D loss: 0.2058
+G_loss: 3.906
+
+Iter: 699000
+D loss: 0.1356
+G_loss: 3.928
+
+Iter: 700000
+D loss: 0.2552
+G_loss: 3.695
+
+Iter: 701000
+D loss: 0.2393
+G_loss: 3.921
+
+Iter: 702000
+D loss: 0.2403
+G_loss: 4.243
+
+Iter: 703000
+D loss: 0.1542
+G_loss: 3.611
+
+Iter: 704000
+D loss: 0.1172
+G_loss: 3.779
+
+Iter: 705000
+D loss: 0.1241
+G_loss: 3.62
+
+Iter: 706000
+D loss: 0.2393
+G_loss: 3.894
+
+Iter: 707000
+D loss: 0.1566
+G_loss: 3.479
+
+Iter: 708000
+D loss: 0.2036
+G_loss: 3.7
+
+Iter: 709000
+D loss: 0.1783
+G_loss: 4.227
+
+Iter: 710000
+D loss: 0.05918
+G_loss: 3.957
+
+Iter: 711000
+D loss: 0.2203
+G_loss: 3.597
+
+Iter: 712000
+D loss: 0.252
+G_loss: 4.308
+
+Iter: 713000
+D loss: 0.169
+G_loss: 4.278
+
+Iter: 714000
+D loss: 0.1487
+G_loss: 4.022
+
+Iter: 715000
+D loss: 0.231
+G_loss: 3.401
+
+Iter: 716000
+D loss: 0.1816
+G_loss: 3.461
+
+Iter: 717000
+D loss: 0.1198
+G_loss: 3.601
+
+Iter: 718000
+D loss: 0.1327
+G_loss: 3.455
+
+Iter: 719000
+D loss: 0.1354
+G_loss: 3.96
+
+Iter: 720000
+D loss: 0.1462
+G_loss: 3.701
+
+Iter: 721000
+D loss: 0.2263
+G_loss: 4.02
+
+Iter: 722000
+D loss: 0.1006
+G_loss: 3.683
+
+Iter: 723000
+D loss: 0.2169
+G_loss: 3.39
+
+Iter: 724000
+D loss: 0.2417
+G_loss: 4.374
+
+Iter: 725000
+D loss: 0.1643
+G_loss: 3.521
+
+Iter: 726000
+D loss: 0.1234
+G_loss: 3.959
+
+Iter: 727000
+D loss: 0.1277
+G_loss: 4.077
+
+Iter: 728000
+D loss: 0.1741
+G_loss: 3.85
+
+Iter: 729000
+D loss: 0.2096
+G_loss: 3.622
+
+Iter: 730000
+D loss: 0.2512
+G_loss: 3.727
+
+Iter: 731000
+D loss: 0.2695
+G_loss: 3.284
+
+Iter: 732000
+D loss: 0.1781
+G_loss: 3.796
+
+Iter: 733000
+D loss: 0.09724
+G_loss: 3.978
+
+Iter: 734000
+D loss: 0.1881
+G_loss: 3.763
+
+Iter: 735000
+D loss: 0.1336
+G_loss: 4.238
+
+Iter: 736000
+D loss: 0.1053
+G_loss: 3.798
+
+Iter: 737000
+D loss: 0.2468
+G_loss: 3.568
+
+Iter: 738000
+D loss: 0.2828
+G_loss: 3.417
+
+Iter: 739000
+D loss: 0.1906
+G_loss: 3.27
+
+Iter: 740000
+D loss: 0.2957
+G_loss: 3.371
+
+Iter: 741000
+D loss: 0.1025
+G_loss: 3.977
+
+Iter: 742000
+D loss: 0.1884
+G_loss: 4.204
+
+Iter: 743000
+D loss: 0.1911
+G_loss: 3.646
+
+Iter: 744000
+D loss: 0.191
+G_loss: 3.897
+
+Iter: 745000
+D loss: 0.2067
+G_loss: 3.215
+
+Iter: 746000
+D loss: 0.07898
+G_loss: 3.659
+
+Iter: 747000
+D loss: 0.1662
+G_loss: 3.716
+
+Iter: 748000
+D loss: 0.1903
+G_loss: 3.836
+
+Iter: 749000
+D loss: 0.0622
+G_loss: 3.956
+
+Iter: 750000
+D loss: 0.1947
+G_loss: 3.523
+
+Iter: 751000
+D loss: 0.2259
+G_loss: 4.402
+
+Iter: 752000
+D loss: 0.2638
+G_loss: 4.074
+
+Iter: 753000
+D loss: 0.2242
+G_loss: 3.92
+
+Iter: 754000
+D loss: 0.09063
+G_loss: 3.666
+
+Iter: 755000
+D loss: 0.1545
+G_loss: 3.699
+
+Iter: 756000
+D loss: 0.2073
+G_loss: 3.802
+
+Iter: 757000
+D loss: 0.1922
+G_loss: 3.624
+
+Iter: 758000
+D loss: 0.1983
+G_loss: 4.017
+
+Iter: 759000
+D loss: 0.2406
+G_loss: 4.297
+
+Iter: 760000
+D loss: 0.1348
+G_loss: 3.436
+
+Iter: 761000
+D loss: 0.1245
+G_loss: 3.851
+
+Iter: 762000
+D loss: 0.1942
+G_loss: 3.617
+
+Iter: 763000
+D loss: 0.1546
+G_loss: 4.141
+
+Iter: 764000
+D loss: 0.1022
+G_loss: 3.669
+
+Iter: 765000
+D loss: 0.1893
+G_loss: 3.912
+
+Iter: 766000
+D loss: 0.2898
+G_loss: 4.064
+
+Iter: 767000
+D loss: 0.2156
+G_loss: 3.855
+
+Iter: 768000
+D loss: 0.1581
+G_loss: 3.824
+
+Iter: 769000
+D loss: 0.1587
+G_loss: 3.922
+
+Iter: 770000
+D loss: 0.1227
+G_loss: 4.384
+
+Iter: 771000
+D loss: 0.1794
+G_loss: 3.562
+
+Iter: 772000
+D loss: 0.086
+G_loss: 4.261
+
+Iter: 773000
+D loss: 0.1735
+G_loss: 3.841
+
+Iter: 774000
+D loss: 0.2072
+G_loss: 3.585
+
+Iter: 775000
+D loss: 0.1467
+G_loss: 3.721
+
+Iter: 776000
+D loss: 0.249
+G_loss: 4.057
+
+Iter: 777000
+D loss: 0.2871
+G_loss: 4.181
+
+Iter: 778000
+D loss: 0.2743
+G_loss: 4.137
+
+Iter: 779000
+D loss: 0.07425
+G_loss: 3.554
+
+Iter: 780000
+D loss: 0.07823
+G_loss: 4.163
+
+Iter: 781000
+D loss: 0.1762
+G_loss: 4.0
+
+Iter: 782000
+D loss: 0.09425
+G_loss: 4.136
+
+Iter: 783000
+D loss: 0.147
+G_loss: 4.143
+
+Iter: 784000
+D loss: 0.2474
+G_loss: 3.53
+
+Iter: 785000
+D loss: 0.1543
+G_loss: 4.453
+
+Iter: 786000
+D loss: 0.1048
+G_loss: 4.322
+
+Iter: 787000
+D loss: 0.1703
+G_loss: 4.26
+
+Iter: 788000
+D loss: 0.08455
+G_loss: 4.145
+
+Iter: 789000
+D loss: 0.07865
+G_loss: 4.092
+
+Iter: 790000
+D loss: 0.1697
+G_loss: 3.738
+
+Iter: 791000
+D loss: 0.1471
+G_loss: 3.966
+
+Iter: 792000
+D loss: 0.1853
+G_loss: 3.939
+
+Iter: 793000
+D loss: 0.2084
+G_loss: 3.621
+
+Iter: 794000
+D loss: 0.09255
+G_loss: 3.852
+
+Iter: 795000
+D loss: 0.2415
+G_loss: 3.719
+
+Iter: 796000
+D loss: 0.1428
+G_loss: 3.752
+
+Iter: 797000
+D loss: 0.08721
+G_loss: 4.298
+
+Iter: 798000
+D loss: 0.3406
+G_loss: 4.013
+
+Iter: 799000
+D loss: 0.1032
+G_loss: 3.85
+
+Iter: 800000
+D loss: 0.2231
+G_loss: 4.011
+
+Iter: 801000
+D loss: 0.1752
+G_loss: 4.158
+
+Iter: 802000
+D loss: 0.1098
+G_loss: 4.073
+
+Iter: 803000
+D loss: 0.08907
+G_loss: 4.132
+
+Iter: 804000
+D loss: 0.1643
+G_loss: 4.215
+
+Iter: 805000
+D loss: 0.1934
+G_loss: 3.972
+
+Iter: 806000
+D loss: 0.1304
+G_loss: 4.263
+
+Iter: 807000
+D loss: 0.1757
+G_loss: 3.557
+
+Iter: 808000
+D loss: 0.1968
+G_loss: 3.592
+
+Iter: 809000
+D loss: 0.2146
+G_loss: 3.997
+
+Iter: 810000
+D loss: 0.1415
+G_loss: 4.0
+
+Iter: 811000
+D loss: 0.08938
+G_loss: 4.079
+
+Iter: 812000
+D loss: 0.09697
+G_loss: 3.47
+
+Iter: 813000
+D loss: 0.2579
+G_loss: 3.754
+
+Iter: 814000
+D loss: 0.2115
+G_loss: 4.044
+
+Iter: 815000
+D loss: 0.2172
+G_loss: 4.394
+
+Iter: 816000
+D loss: 0.1421
+G_loss: 4.046
+
+Iter: 817000
+D loss: 0.1516
+G_loss: 4.275
+
+Iter: 818000
+D loss: 0.1323
+G_loss: 4.448
+
+Iter: 819000
+D loss: 0.1575
+G_loss: 3.548
+
+Iter: 820000
+D loss: 0.05154
+G_loss: 3.828
+
+Iter: 821000
+D loss: 0.1982
+G_loss: 4.086
+
+Iter: 822000
+D loss: 0.1174
+G_loss: 4.545
+
+Iter: 823000
+D loss: 0.08914
+G_loss: 4.46
+
+Iter: 824000
+D loss: 0.09078
+G_loss: 3.792
+
+Iter: 825000
+D loss: 0.134
+G_loss: 4.007
+
+Iter: 826000
+D loss: 0.1975
+G_loss: 3.861
+
+Iter: 827000
+D loss: 0.1051
+G_loss: 3.966
+
+Iter: 828000
+D loss: 0.2076
+G_loss: 3.684
+
+Iter: 829000
+D loss: 0.2099
+G_loss: 3.565
+
+Iter: 830000
+D loss: 0.1194
+G_loss: 4.101
+
+Iter: 831000
+D loss: 0.1629
+G_loss: 3.896
+
+Iter: 832000
+D loss: 0.1115
+G_loss: 3.992
+
+Iter: 833000
+D loss: 0.1372
+G_loss: 4.372
+
+Iter: 834000
+D loss: 0.09906
+G_loss: 3.931
+
+Iter: 835000
+D loss: 0.0626
+G_loss: 4.254
+
+Iter: 836000
+D loss: 0.103
+G_loss: 4.183
+
+Iter: 837000
+D loss: 0.508
+G_loss: 4.644
+
+Iter: 838000
+D loss: 0.1663
+G_loss: 3.878
+
+Iter: 839000
+D loss: 0.2145
+G_loss: 3.811
+
+Iter: 840000
+D loss: 0.1207
+G_loss: 3.731
+
+Iter: 841000
+D loss: 0.09852
+G_loss: 3.507
+
+Iter: 842000
+D loss: 0.2525
+G_loss: 3.67
+
+Iter: 843000
+D loss: 0.2734
+G_loss: 3.717
+
+Iter: 844000
+D loss: 0.09761
+G_loss: 3.631
+
+Iter: 845000
+D loss: 0.1731
+G_loss: 3.631
+
+Iter: 846000
+D loss: 0.07989
+G_loss: 3.668
+
+Iter: 847000
+D loss: 0.1734
+G_loss: 3.829
+
+Iter: 848000
+D loss: 0.1324
+G_loss: 4.155
+
+Iter: 849000
+D loss: 0.2045
+G_loss: 3.718
+
+Iter: 850000
+D loss: 0.1806
+G_loss: 3.799
+
+Iter: 851000
+D loss: 0.1868
+G_loss: 3.983
+
+Iter: 852000
+D loss: 0.1678
+G_loss: 3.803
+
+Iter: 853000
+D loss: 0.1369
+G_loss: 3.647
+
+Iter: 854000
+D loss: 0.1118
+G_loss: 3.653
+
+Iter: 855000
+D loss: 0.1129
+G_loss: 3.948
+
+Iter: 856000
+D loss: 0.1185
+G_loss: 4.388
+
+Iter: 857000
+D loss: 0.1303
+G_loss: 4.23
+
+Iter: 858000
+D loss: 0.1569
+G_loss: 3.936
+
+Iter: 859000
+D loss: 0.1237
+G_loss: 3.991
+
+Iter: 860000
+D loss: 0.07847
+G_loss: 4.403
+
+Iter: 861000
+D loss: 0.1673
+G_loss: 4.333
+
+Iter: 862000
+D loss: 0.1424
+G_loss: 3.909
+
+Iter: 863000
+D loss: 0.0272
+G_loss: 4.375
+
+Iter: 864000
+D loss: 0.04732
+G_loss: 4.494
+
+Iter: 865000
+D loss: 0.1716
+G_loss: 4.074
+
+Iter: 866000
+D loss: 0.1981
+G_loss: 3.856
+
+Iter: 867000
+D loss: 0.1725
+G_loss: 3.735
+
+Iter: 868000
+D loss: 0.1336
+G_loss: 3.938
+
+Iter: 869000
+D loss: 0.09291
+G_loss: 4.315
+
+Iter: 870000
+D loss: 0.1739
+G_loss: 4.01
+
+Iter: 871000
+D loss: 0.1705
+G_loss: 3.973
+
+Iter: 872000
+D loss: 0.1193
+G_loss: 3.667
+
+Iter: 873000
+D loss: 0.1436
+G_loss: 4.163
+
+Iter: 874000
+D loss: 0.2795
+G_loss: 4.365
+
+Iter: 875000
+D loss: 0.1196
+G_loss: 4.167
+
+Iter: 876000
+D loss: 0.1741
+G_loss: 3.926
+
+Iter: 877000
+D loss: 0.1261
+G_loss: 4.586
+
+Iter: 878000
+D loss: 0.08154
+G_loss: 3.867
+
+Iter: 879000
+D loss: 0.06634
+G_loss: 4.16
+
+Iter: 880000
+D loss: 0.1655
+G_loss: 3.779
+
+Iter: 881000
+D loss: 0.08364
+G_loss: 3.96
+
+Iter: 882000
+D loss: 0.103
+G_loss: 4.079
+
+Iter: 883000
+D loss: 0.09983
+G_loss: 3.817
+
+Iter: 884000
+D loss: 0.08879
+G_loss: 4.185
+
+Iter: 885000
+D loss: 0.163
+G_loss: 3.801
+
+Iter: 886000
+D loss: 0.2958
+G_loss: 3.928
+
+Iter: 887000
+D loss: 0.1279
+G_loss: 4.279
+
+Iter: 888000
+D loss: 0.248
+G_loss: 4.075
+
+Iter: 889000
+D loss: 0.1816
+G_loss: 4.258
+
+Iter: 890000
+D loss: 0.08608
+G_loss: 4.007
+
+Iter: 891000
+D loss: 0.1022
+G_loss: 4.135
+
+Iter: 892000
+D loss: 0.2042
+G_loss: 4.455
+
+Iter: 893000
+D loss: 0.2035
+G_loss: 3.773
+
+Iter: 894000
+D loss: 0.09349
+G_loss: 4.022
+
+Iter: 895000
+D loss: 0.06083
+G_loss: 3.839
+
+Iter: 896000
+D loss: 0.1941
+G_loss: 3.933
+
+Iter: 897000
+D loss: 0.2029
+G_loss: 3.907
+
+Iter: 898000
+D loss: 0.06912
+G_loss: 3.913
+
+Iter: 899000
+D loss: 0.1149
+G_loss: 4.246
+
+Iter: 900000
+D loss: 0.1281
+G_loss: 4.368
+
+Iter: 901000
+D loss: 0.2177
+G_loss: 3.621
+
+Iter: 902000
+D loss: 0.2281
+G_loss: 4.193
+
+Iter: 903000
+D loss: 0.1486
+G_loss: 3.56
+
+Iter: 904000
+D loss: 0.08943
+G_loss: 4.61
+
+Iter: 905000
+D loss: 0.1331
+G_loss: 4.075
+
+Iter: 906000
+D loss: 0.1261
+G_loss: 4.417
+
+Iter: 907000
+D loss: 0.1539
+G_loss: 4.089
+
+Iter: 908000
+D loss: 0.1327
+G_loss: 4.043
+
+Iter: 909000
+D loss: 0.2242
+G_loss: 4.017
+
+Iter: 910000
+D loss: 0.1023
+G_loss: 4.166
+
+Iter: 911000
+D loss: 0.08952
+G_loss: 4.279
+
+Iter: 912000
+D loss: 0.2615
+G_loss: 3.825
+
+Iter: 913000
+D loss: 0.2011
+G_loss: 4.541
+
+Iter: 914000
+D loss: 0.173
+G_loss: 4.103
+
+Iter: 915000
+D loss: 0.117
+G_loss: 3.645
+
+Iter: 916000
+D loss: 0.2597
+G_loss: 4.526
+
+Iter: 917000
+D loss: 0.1801
+G_loss: 4.482
+
+Iter: 918000
+D loss: 0.1621
+G_loss: 4.08
+
+Iter: 919000
+D loss: 0.2057
+G_loss: 4.248
+
+Iter: 920000
+D loss: 0.1764
+G_loss: 3.925
+
+Iter: 921000
+D loss: 0.1754
+G_loss: 3.798
+
+Iter: 922000
+D loss: 0.1253
+G_loss: 3.932
+
+Iter: 923000
+D loss: 0.2055
+G_loss: 3.948
+
+Iter: 924000
+D loss: 0.1376
+G_loss: 3.739
+
+Iter: 925000
+D loss: 0.1121
+G_loss: 5.205
+
+Iter: 926000
+D loss: 0.1549
+G_loss: 3.849
+
+Iter: 927000
+D loss: 0.2061
+G_loss: 4.162
+
+Iter: 928000
+D loss: 0.2306
+G_loss: 3.696
+
+Iter: 929000
+D loss: 0.07007
+G_loss: 4.43
+
+Iter: 930000
+D loss: 0.1283
+G_loss: 3.707
+
+Iter: 931000
+D loss: 0.08725
+G_loss: 4.404
+
+Iter: 932000
+D loss: 0.1561
+G_loss: 3.671
+
+Iter: 933000
+D loss: 0.06101
+G_loss: 4.085
+
+Iter: 934000
+D loss: 0.07563
+G_loss: 4.1
+
+Iter: 935000
+D loss: 0.2333
+G_loss: 4.135
+
+Iter: 936000
+D loss: 0.07449
+G_loss: 3.687
+
+Iter: 937000
+D loss: 0.2447
+G_loss: 4.218
+
+Iter: 938000
+D loss: 0.1586
+G_loss: 4.002
+
+Iter: 939000
+D loss: 0.1729
+G_loss: 3.598
+
+Iter: 940000
+D loss: 0.2792
+G_loss: 3.572
+
+Iter: 941000
+D loss: 0.07659
+G_loss: 4.123
+
+Iter: 942000
+D loss: 0.1665
+G_loss: 3.738
+
+Iter: 943000
+D loss: 0.2411
+G_loss: 3.926
+
+Iter: 944000
+D loss: 0.1741
+G_loss: 3.564
+
+Iter: 945000
+D loss: 0.1785
+G_loss: 4.003
+
+Iter: 946000
+D loss: 0.1746
+G_loss: 4.116
+
+Iter: 947000
+D loss: 0.1329
+G_loss: 3.958
+
+Iter: 948000
+D loss: 0.1424
+G_loss: 3.574
+
+Iter: 949000
+D loss: 0.104
+G_loss: 3.885
+
+Iter: 950000
+D loss: 0.1395
+G_loss: 4.069
+
+Iter: 951000
+D loss: 0.0965
+G_loss: 4.274
+
+Iter: 952000
+D loss: 0.1634
+G_loss: 4.059
+
+Iter: 953000
+D loss: 0.09868
+G_loss: 4.055
+
+Iter: 954000
+D loss: 0.1267
+G_loss: 4.447
+
+Iter: 955000
+D loss: 0.1873
+G_loss: 3.88
+
+Iter: 956000
+D loss: 0.1388
+G_loss: 3.768
+
+Iter: 957000
+D loss: 0.1348
+G_loss: 4.163
+
+Iter: 958000
+D loss: 0.1677
+G_loss: 3.989
+
+Iter: 959000
+D loss: 0.07059
+G_loss: 3.916
+
+Iter: 960000
+D loss: 0.1163
+G_loss: 4.057
+
+Iter: 961000
+D loss: 0.1869
+G_loss: 4.422
+
+Iter: 962000
+D loss: 0.3664
+G_loss: 4.779
+
+Iter: 963000
+D loss: 0.134
+G_loss: 3.581
+
+Iter: 964000
+D loss: 0.2809
+G_loss: 3.86
+
+Iter: 965000
+D loss: 0.2795
+G_loss: 3.332
+
+Iter: 966000
+D loss: 0.2579
+G_loss: 3.955
+
+Iter: 967000
+D loss: 0.2795
+G_loss: 3.473
+
+Iter: 968000
+D loss: 0.1132
+G_loss: 3.481
+
+Iter: 969000
+D loss: 0.1998
+G_loss: 3.409
+
+Iter: 970000
+D loss: 0.2273
+G_loss: 3.717
+
+Iter: 971000
+D loss: 0.2351
+G_loss: 3.062
+
+Iter: 972000
+D loss: 0.1393
+G_loss: 3.694
+
+Iter: 973000
+D loss: 0.2168
+G_loss: 3.648
+
+Iter: 974000
+D loss: 0.2785
+G_loss: 3.367
+
+Iter: 975000
+D loss: 0.2138
+G_loss: 3.458
+
+Iter: 976000
+D loss: 0.242
+G_loss: 3.477
+
+Iter: 977000
+D loss: 0.1106
+G_loss: 3.583
+
+Iter: 978000
+D loss: 0.1774
+G_loss: 3.112
+
+Iter: 979000
+D loss: 0.3086
+G_loss: 3.525
+
+Iter: 980000
+D loss: 0.1293
+G_loss: 3.319
+
+Iter: 981000
+D loss: 0.2063
+G_loss: 3.664
+
+Iter: 982000
+D loss: 0.2053
+G_loss: 3.99
+
+Iter: 983000
+D loss: 0.1816
+G_loss: 3.637
+
+Iter: 984000
+D loss: 0.2371
+G_loss: 3.374
+
+Iter: 985000
+D loss: 0.1585
+G_loss: 3.594
+
+Iter: 986000
+D loss: 0.142
+G_loss: 3.71
+
+Iter: 987000
+D loss: 0.2301
+G_loss: 3.395
+
+Iter: 988000
+D loss: 0.268
+G_loss: 3.613
+
+Iter: 989000
+D loss: 0.1559
+G_loss: 4.064
+
+Iter: 990000
+D loss: 0.2239
+G_loss: 3.747
+
+Iter: 991000
+D loss: 0.1287
+G_loss: 3.49
+
+Iter: 992000
+D loss: 0.1357
+G_loss: 3.522
+
+Iter: 993000
+D loss: 0.202
+G_loss: 3.507
+
+Iter: 994000
+D loss: 0.2389
+G_loss: 3.447
+
+Iter: 995000
+D loss: 0.2545
+G_loss: 3.906
+
+Iter: 996000
+D loss: 0.1264
+G_loss: 3.752
+
+Iter: 997000
+D loss: 0.1748
+G_loss: 4.137
+
+Iter: 998000
+D loss: 0.2302
+G_loss: 3.606
+
+Iter: 999000
+D loss: 0.2456
+G_loss: 4.012
