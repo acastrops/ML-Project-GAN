@@ -1,8 +1,14 @@
 # ML-Project-GAN
 Repository for the Machine Learning Project, Spring 2018.
 
+![](https://cs9.pikabu.ru/post_img/big/2017/08/13/6/1502615385143983975.jpg)
+
 [Project Introduction Presentation](https://docs.google.com/presentation/d/1hQ1Hkw4pFi2SgrW0e6UUQaoTpGMrgFOkR3J3KblcrJg/edit?usp=sharing
 )
+
+## Team
+
+[Lydia](https://github.com/lydialaseur), [Kevin](https://github.com/Kevinisagirl), [Adriana](github.com/acastrops)
 
 ## GAN, Tensorflow and MNIST
 
