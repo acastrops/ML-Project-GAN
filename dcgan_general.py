@@ -16,7 +16,7 @@ import shutil
 plt.switch_backend('agg')
 
 # path to directory containing all the training imgs
-input_dir = './kaggle_imgs/Training/3/'
+input_dir = './happy_kaggle_faces/'
 input_path = os.path.join(input_dir,'*g') # will work for png or jpg
 
 # file paths for the real imgs
@@ -184,7 +184,8 @@ sess.run(tf.global_variables_initializer())
 
 # training
 print("training")
-for i in range(60000):
+num_iterations = 10000
+for i in range(num_iterations):
     train_d = True
     train_g = True
     keep_prob_train = 0.6 # 0.5
