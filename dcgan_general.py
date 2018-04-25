@@ -140,50 +140,59 @@ def discriminator(img_in, reuse=None, keep_prob=keep_prob):
         # Gives the probability of the image being real; Outputs [batch_size, units]
         x = tf.layers.dense(x, units=1, activation=tf.nn.sigmoid)
 
-        # Returns a tensor [batch_size, 1]: returning a prob. for each image in the batch
+        # Returns a tensor [batch_size, 1]: a prob for each image in the batch
         return x
 
 def generator(z, keep_prob=keep_prob, is_training=is_training):
     factor = 4 # Factor required to get the noise to the right size
                # ORIGINAL IMGS MUST HAVE DIM DIVISIBLE BY 4 (unless we change the strides)
 
-    # Noise fed into the generator is smaller than the input imgs and grows to the input size as it flows through the generator
-    noise_w = int(w/factor)
-    noise_h = int(h/factor)
+    noise_w = int(w/factor) # Noise fed into the generator is smaller than the input images
+    noise_h = int(h/factor) # and grows to the input size as it flows through the generator
 
-    activation = lrelu # leaky-relu 
-    momentum = 0.9 # Used in batch_norm to penalize
+    activation = lrelu # leaky-relu
+    momentum = 0.9 # Used in batch_norm: decay for the moving average
     with tf.variable_scope("generator", reuse=None):
-        x = z
+        # Input Layer (Noise)
+        x = z # Shape: [batch_size, n_noise]
 
+        # First layer (fully connected): reducing the noise vector by rescaling with 'factor'
+        # Shape: here, we went from n_noise=64 to (factor**2)*c=48
         x = tf.layers.dense(x, units=factor * factor * c, activation=activation)
+        x = tf.layers.dropout(x, keep_prob) #1
 
-        x = tf.layers.dropout(x, keep_prob)
-
+        # First Batch Normalization layer:
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
-
+        #
         x = tf.reshape(x, shape=[-1, factor, factor, c])
-
+        #
         x = tf.image.resize_images(x, size=[noise_w, noise_h])
 
-
+        # First convolutional layer:
         x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=256, strides=2, padding='same', activation=activation)
-        x = tf.layers.dropout(x, keep_prob)
+        x = tf.layers.dropout(x, keep_prob) #2
+        # Second batch norm layer
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
+        # Second convolutional layer
         x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=128, strides=2, padding='same', activation=activation)
-        x = tf.layers.dropout(x, keep_prob)
+        x = tf.layers.dropout(x, keep_prob) #3
+        # Third batch norm layer
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
+        # Third convolutional layer
         x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=64, strides=1, padding='same', activation=activation)
-        x = tf.layers.dropout(x, keep_prob)
+        x = tf.layers.dropout(x, keep_prob) #4
+        # Fourth batch norm layer
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
+        # Fourth convolutional layer
         x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=c, strides=1, padding='same', activation=tf.nn.sigmoid)
 
+        # Returns
         return x
 
-# loss function and optimizers
+# Loss function and optimizers
 g = generator(noise, keep_prob, is_training)
 print(g)
 d_real = discriminator(X_in)
