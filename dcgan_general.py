@@ -13,30 +13,30 @@ from scipy.misc import imresize, imsave
 import tensorflow as tf
 import glob
 import shutil
-plt.switch_backend('agg')
+plt.switch_backend('agg') # To not open window with plots on the server
 
-# path to directory containing all the training imgs
+# Path to directory containing all the training imgs
 input_dir = './happy_kaggle_faces/'
 input_path = os.path.join(input_dir,'*g') # will work for png or jpg
 
-# file paths for the real imgs
+# All images that match input_path
 input_files = glob.glob(input_path)
 
-# total number of input images
+# Total number of input images
 total_input = len(input_files)
 
-# read in one img to get the dimensions
+# Read in one img to get the dimensions
 example_input = imread(input_files[0])
-w, h, c = example_input.shape
+w, h, c = example_input.shape # c = # of channels
 
-# create dir for output
+# Create directory for output
 out_dir = "kaggle_out_run1"
 if os.path.exists(out_dir):
     shutil.rmtree(out_dir)
 os.makedirs(out_dir)
 
 
-# method to pull random batch of images
+# Method to pull random batch of images
 def next_batch(num, data=input_files):
     idx = np.arange(0 , len(data))
     np.random.shuffle(idx)
@@ -48,6 +48,7 @@ def next_batch(num, data=input_files):
     return shuffled
 
 # Code by Parag Mital (https://github.com/pkmital/CADL/)
+# Makes montage of output images from the generator
 def montage(images):
     if isinstance(images, list):
         images = np.array(images)
@@ -78,34 +79,51 @@ def montage(images):
                   1 + j + j * img_w:1 + j + (j + 1) * img_w] = this_img
     return m
 
-# definition of the network
+# Definition of the network
 tf.reset_default_graph()
-batch_size = 64
-n_noise = 64
+batch_size = 64 # number of real images fed in
+n_noise = 64 # inital size of noise images
 
+# Placeholder for real (X_in)
 X_in = tf.placeholder(dtype=tf.float32, shape=[None, w, h, c], name='X')
+# Placeholder for fake imgs (noise): feed a flat vector of len(n_noise) into generator
 noise = tf.placeholder(dtype=tf.float32, shape=[None, n_noise])
-
+# Proportion of neurons to keep after a dropout layer
 keep_prob = tf.placeholder(dtype=tf.float32, name='keep_prob')
+# Flag for training required for batch-norm layers
 is_training = tf.placeholder(dtype=tf.bool, name='is_training')
 
-def lrelu(x):
+
+def lrelu(x): # Leaky-relu to avoid the dying relu problem
     return tf.maximum(x, tf.multiply(x, 0.2))
 
-def binary_cross_entropy(x, z):
+
+def binary_cross_entropy(x, z): # For multi-label classifications where m=2; x: y, z: y-hat
     eps = 1e-12
     return (-(x * tf.log(z + eps) + (1. - x) * tf.log(1. - z + eps)))
 
+# img_in: list of image arrays,
+# There are two instances of the discriminator (1 for real, 1 for fake)
+# for the 1st instance (real), reuse=None
+# for the 2nd instance (fake), reuse=True insures both instances are using the same weights
 def discriminator(img_in, reuse=None, keep_prob=keep_prob):
     activation = lrelu
     with tf.variable_scope("discriminator", reuse=reuse):
-        x = tf.reshape(img_in, shape=[-1, w, h, c])
-        x = tf.layers.conv2d(x, kernel_size=5, filters=256, strides=2, padding='same', activation=activation)
+        #
+        x = tf.reshape(img_in, shape=[-1, w, h, c]) # -1: invariate to batch size
+        #
+        x = tf.layers.conv2d(x, kernel_size=5, filters=256, strides=2,
+                            padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob)
-        x = tf.layers.conv2d(x, kernel_size=5, filters=128, strides=1, padding='same', activation=activation)
+
+        x = tf.layers.conv2d(x, kernel_size=5, filters=128, strides=1,
+                            padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob)
-        x = tf.layers.conv2d(x, kernel_size=5, filters=64, strides=1, padding='same', activation=activation)
+
+        x = tf.layers.conv2d(x, kernel_size=5, filters=64, strides=1,
+                            padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob)
+
         x = tf.contrib.layers.flatten(x)
         x = tf.layers.dense(x, units=128, activation=activation)
         x = tf.layers.dense(x, units=1, activation=tf.nn.sigmoid)
