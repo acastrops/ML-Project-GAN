@@ -13,6 +13,7 @@ from scipy.misc import imresize, imsave
 import tensorflow as tf
 import glob
 import shutil
+import math
 plt.switch_backend('agg')
 
 # path to directory containing all the training imgs
@@ -32,7 +33,7 @@ w, h = example_input.shape
 
 
 # create dir for output
-out_dir = "kaggle_out_run2"
+out_dir = "kaggle_out_run8"
 if os.path.exists(out_dir):
     shutil.rmtree(out_dir)
 os.makedirs(out_dir)
@@ -104,11 +105,11 @@ def discriminator(img_in, reuse=None, keep_prob=keep_prob):
 
         x = tf.reshape(img_in, shape=[-1, w, h, 1])
 
-        x = tf.layers.conv2d(x, kernel_size=5, filters=256, strides=2, padding='same', activation=activation)
+        x = tf.layers.conv2d(x, kernel_size=5, filters=64, strides=2, padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob)
 
 
-        x = tf.layers.conv2d(x, kernel_size=5, filters=128, strides=1, padding='same', activation=activation)
+        x = tf.layers.conv2d(x, kernel_size=5, filters=64, strides=1, padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob)
 
         x = tf.layers.conv2d(x, kernel_size=5, filters=64, strides=1, padding='same', activation=activation)
@@ -150,11 +151,11 @@ def generator(z, keep_prob=keep_prob, is_training=is_training):
         x = tf.image.resize_images(x, size=[noise_w, noise_h])
 
 
-        x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=256, strides=2, padding='same', activation=activation)
+        x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=64, strides=2, padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob)
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
-        x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=128, strides=2, padding='same', activation=activation)
+        x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=64, strides=2, padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob)
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
@@ -185,10 +186,13 @@ loss_g = tf.reduce_mean(binary_cross_entropy(tf.ones_like(d_fake), d_fake))
 
 loss_d = tf.reduce_mean(0.5 * (loss_d_real + loss_d_fake))
 
+
+decayed_lr = 0.0001 +  tf.train.exponential_decay(0.02, iter, 1000, 1/math.e)
+
 update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
 with tf.control_dependencies(update_ops):
-    optimizer_d = tf.train.RMSPropOptimizer(learning_rate=0.0001).minimize(loss_d + d_reg, var_list=vars_d)
-    optimizer_g = tf.train.RMSPropOptimizer(learning_rate=0.0002).minimize(loss_g + g_reg, var_list=vars_g)
+    optimizer_d = tf.train.RMSPropOptimizer(learning_rate=decayed_lr).minimize(loss_d + d_reg, var_list=vars_d)
+    optimizer_g = tf.train.RMSPropOptimizer(learning_rate=decayed_lr).minimize(loss_g + g_reg, var_list=vars_g)
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
@@ -214,19 +218,19 @@ for i in range(num_iterations):
     g_ls = g_ls
     d_ls = d_ls
 
-    if g_ls * 1.35 < d_ls:
+    if g_ls * 1.5 < d_ls:
         train_g = False
         pass
-    if d_ls * 1.35 < g_ls:
+    if d_ls * 2.0 < g_ls:
         train_d = False
         pass
 
     if train_d:
-        sess.run(optimizer_d, feed_dict={noise: n, X_in: batch, keep_prob: keep_prob_train, is_training:True})
+        sess.run(optimizer_d, feed_dict={noise: n, X_in: batch, keep_prob: keep_prob_train, is_training:True, iter:i})
 
 
     if train_g:
-        sess.run(optimizer_g, feed_dict={noise: n, keep_prob: keep_prob_train, is_training:True})
+        sess.run(optimizer_g, feed_dict={noise: n, keep_prob: keep_prob_train, is_training:True, iter:i})
 
 
     if not i % 10:
@@ -242,7 +246,7 @@ for i in range(num_iterations):
         imgs = [img[:,:,:] for img in gen_imgs]
         m = montage(imgs[0:16])
         m = np.reshape(m, m.shape[0:2])
-
+        # m = np.ceil(255 * m)
         #m = imgs[0]
         plt.axis('off')
         plt.imshow(m, cmap='gray')
