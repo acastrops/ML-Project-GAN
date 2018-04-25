@@ -109,50 +109,60 @@ def binary_cross_entropy(x, z): # For multi-label classifications where m=2; x: 
 def discriminator(img_in, reuse=None, keep_prob=keep_prob):
     activation = lrelu
     with tf.variable_scope("discriminator", reuse=reuse):
-        #
+
+        # Input layer: takes list of image arrays and reshapes them into a tensor object
+        # Shape: [batch_size, width, height, channels]: sizes for the 4 separate dimensions
         x = tf.reshape(img_in, shape=[-1, w, h, c]) # -1: invariate to batch size
-        #
+
+        # First convolutional layer
+        # Output shape: [batch_size, w/2, h/2, channels=filters]
         x = tf.layers.conv2d(x, kernel_size=5, filters=256, strides=2,
                             padding='same', activation=activation)
-        x = tf.layers.dropout(x, keep_prob)
+        x = tf.layers.dropout(x, keep_prob) # sets a fraction (1-keep_prob) of the inputs to 0
 
+        # Second convolutional layer
+        # Output shape: [batch_size, w/2, h/2, channels=filters]
         x = tf.layers.conv2d(x, kernel_size=5, filters=128, strides=1,
                             padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob)
 
+        # Third convolutional layer
+        # Output layer: [batch_size, w/2, h/2, channels=filters]
         x = tf.layers.conv2d(x, kernel_size=5, filters=64, strides=1,
                             padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob)
 
+        # Reshaping output from 3rd conv. layer before sending it to the fully connected layer
+        # Shape: [batch_size, w/2*h/2*channels=filters from 3rd convolution]
         x = tf.contrib.layers.flatten(x)
-        x = tf.layers.dense(x, units=128, activation=activation)
+        # Reduces the dimensionality of the output space before lrelu
+        x = tf.layers.dense(x, units=128, activation=activation) # Outputs [batch_size, units]
+        # Gives the probability of the image being real; Outputs [batch_size, units]
         x = tf.layers.dense(x, units=1, activation=tf.nn.sigmoid)
+
+        # Returns a tensor [batch_size, 1]: returning a prob. for each image in the batch
         return x
 
 def generator(z, keep_prob=keep_prob, is_training=is_training):
-    # the factor required to get the noise to the right size, ORIGINAL IMGS MUST HAVE DIM DIVISIBLE BY 4 (unless we change the strides)
-    d = 4
+    factor = 4 # Factor required to get the noise to the right size
+               # ORIGINAL IMGS MUST HAVE DIM DIVISIBLE BY 4 (unless we change the strides)
 
-    # the noise fed into the generator is smaller than the input imgs and grows to the input size as it flows through the generator
-    noise_w = int(w/d)
-    noise_h = int(h/d)
+    # Noise fed into the generator is smaller than the input imgs and grows to the input size as it flows through the generator
+    noise_w = int(w/factor)
+    noise_h = int(h/factor)
 
-    # custom activation function to use in each layer except the last
-    activation = lrelu
-    momentum = 0.9
+    activation = lrelu # leaky-relu 
+    momentum = 0.9 # Used in batch_norm to penalize
     with tf.variable_scope("generator", reuse=None):
         x = z
-        #
-        # d1 = 4#3
-        # d2 = c
 
-        x = tf.layers.dense(x, units=d * d * c, activation=activation)
+        x = tf.layers.dense(x, units=factor * factor * c, activation=activation)
 
         x = tf.layers.dropout(x, keep_prob)
 
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
-        x = tf.reshape(x, shape=[-1, d, d, c])
+        x = tf.reshape(x, shape=[-1, factor, factor, c])
 
         x = tf.image.resize_images(x, size=[noise_w, noise_h])
 
