@@ -6,7 +6,7 @@ import matplotlib.gridspec as gridspec
 import os
 
 mnist = input_data.read_data_sets('./MNIST_data', one_hot=True)
-print(mnist.shape)
+print(mnist.shape())
 input()
 
 def xavier_init(size):
