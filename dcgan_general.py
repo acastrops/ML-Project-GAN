@@ -159,62 +159,86 @@ def generator(z, keep_prob=keep_prob, is_training=is_training):
         # First layer (fully connected): reducing the noise vector by rescaling with 'factor'
         # Shape: here, we went from n_noise=64 to (factor**2)*c=48
         x = tf.layers.dense(x, units=factor * factor * c, activation=activation)
-        x = tf.layers.dropout(x, keep_prob) #1
+        x = tf.layers.dropout(x, keep_prob)
 
         # First Batch Normalization layer:
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
-        #
+        # Reshape the noise vector into a stack of c matrices of size (factor x factor)
         x = tf.reshape(x, shape=[-1, factor, factor, c])
-        #
+        # Enlarge the noise images using binlinear interpolation
+        # Resulting sizes: noise_w = original_w*factor noise_h = original_h*factor
         x = tf.image.resize_images(x, size=[noise_w, noise_h])
 
-        # First convolutional layer:
+        # First convolutional layer: applies 256 different kernels over each image in the batch, with stride of 2
+        # Kernel shape: [5, 5, 3]
+        # Output shape: [batch_size, noise_w*2, noise_h*2, filters=256]
         x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=256, strides=2, padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob) #2
         # Second batch norm layer
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
-        # Second convolutional layer
+        # Second convolutional layer: applies 128 different kernels over each "image" from the previous layer, with stride of 2
+        # Kernel shape: [5, 5, 256]
+        # Output shape: [batch_size, noise_w*4=original_w, noise_h*4=original_h, filters=128]
         x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=128, strides=2, padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob) #3
         # Third batch norm layer
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
-        # Third convolutional layer
+        # Third convolutional layer: applies 64 different kernels over each "image" from the previous layer, with stride of 1
+        # Kernel shape: [5, 5, 128]
+        # Output shape: [batch_size, noise_w*4=original_w, noise_h*4=original_h, filters=64]
         x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=64, strides=1, padding='same', activation=activation)
         x = tf.layers.dropout(x, keep_prob) #4
         # Fourth batch norm layer
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
-        # Fourth convolutional layer
+        # Fourth convolutional layer: applied 3 different kernels over each "image" from the previous layer, with stride of 1
+        # Kernel shape: [5, 5, 64]
+        # Output shape: [batch_size, noise_w*4=original_w, noise_h*4=original_h, filters=c]
+        # The resulting output shape is now indentical to that of our original images [w,h,c] where c is 3 for RGB images
         x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=c, strides=1, padding='same', activation=tf.nn.sigmoid)
 
         # Returns
         return x
 
-# Loss function and optimizers
+# initialize generator object
 g = generator(noise, keep_prob, is_training)
-print(g)
-d_real = discriminator(X_in)
-d_fake = discriminator(g, reuse=True)
+# print(g)
 
+# initialize 2 discrimininator obejcts, d_real will be fed real images and d_fake will be fed the generated images
+d_real = discriminator(X_in)
+d_fake = discriminator(g, reuse=True) # reuse=True ensures that the weights are the same for both discrimininator objects
+
+# define 2 different variable scopes, one for the generator and one for the disrciminator
 vars_g = [var for var in tf.trainable_variables() if var.name.startswith("generator")]
 vars_d = [var for var in tf.trainable_variables() if var.name.startswith("discriminator")]
 
-
+# initialize l2 regularization functions, one each for generator and discriminator
+# will be passed to the optimizer along with the loss functions
 d_reg = tf.contrib.layers.apply_regularization(tf.contrib.layers.l2_regularizer(1e-6), vars_d)
 g_reg = tf.contrib.layers.apply_regularization(tf.contrib.layers.l2_regularizer(1e-6), vars_g)
 
+# discriminator has two loss functions, one for each disrciminator object (d_real and d_fake)
+# loss_d_real measures how often the discriminator correctly classifies real data as real
 loss_d_real = binary_cross_entropy(tf.ones_like(d_real), d_real)
+# loss_d_fake measures how often the discriminator correctly classifies fake data as fake
 loss_d_fake = binary_cross_entropy(tf.zeros_like(d_fake), d_fake)
+# loss_g measures how often the discriminator incorrectly classified fake data as real
 loss_g = tf.reduce_mean(binary_cross_entropy(tf.ones_like(d_fake), d_fake))
 
+# get average of loss_d_real and loss_d_fake for an overall loss function for discriminator
 loss_d = tf.reduce_mean(0.5 * (loss_d_real + loss_d_fake))
 
+# get update_ops and add as control dependency (required for moving average of means and std dev's in batch_norm)
 update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
 with tf.control_dependencies(update_ops):
+    # minimize the discriminator loss plus the l-2 regularization of discriminator's weights
     optimizer_d = tf.train.RMSPropOptimizer(learning_rate=0.0001).minimize(loss_d + d_reg, var_list=vars_d)
+    # minimize the generator loss plus the l-2 regularization of generator's weights
     optimizer_g = tf.train.RMSPropOptimizer(learning_rate=0.0002).minimize(loss_g + g_reg, var_list=vars_g)
+
+# initialize tf sessions and load the global variables
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
@@ -223,38 +247,44 @@ sess.run(tf.global_variables_initializer())
 print("training")
 num_iterations = 10000
 for i in range(num_iterations):
+    # set both discriminator and generator to be trained simultaneously
     train_d = True
     train_g = True
     keep_prob_train = 0.6 # 0.5
 
-
+    # generate a batch of noise vectors, to be input into generator
     n = np.random.uniform(0.0, 1.0, [batch_size, n_noise]).astype(np.float32)
+
+    # generate a random batch of real images, save as a list of numpy arrays
     batch = [b for b in next_batch(num=batch_size)]
 
+    # run one pass through the networks, passing both real images and the noise vectors
     d_real_ls, d_fake_ls, g_ls, d_ls = sess.run([loss_d_real, loss_d_fake, loss_g, loss_d], feed_dict={X_in: batch, noise: n, keep_prob: keep_prob_train, is_training:True})
 
-    d_fake_ls_init = d_fake_ls
+    # d_fake_ls_init = d_fake_ls #pretty sure this is unnecessary, is never referenced again
 
     d_real_ls = np.mean(d_real_ls)
     d_fake_ls = np.mean(d_fake_ls)
     g_ls = g_ls
     d_ls = d_ls
 
+    # if loss of the discriminator is greater than  1.35 times the loss of the generator, stop training the generator for now
     if g_ls * 1.35 < d_ls:
         train_g = False
         pass
+    # if loss of the generator is greater than 1.35 times the loss of the discriminator, stop training the discriminator for now
     if d_ls * 1.35 < g_ls:
         train_d = False
         pass
 
+    # run a second pass, allowing either the discriminator or generator to catch up
     if train_d:
         sess.run(optimizer_d, feed_dict={noise: n, X_in: batch, keep_prob: keep_prob_train, is_training:True})
-
 
     if train_g:
         sess.run(optimizer_g, feed_dict={noise: n, keep_prob: keep_prob_train, is_training:True})
 
-
+    # print progress output
     if not i % 10:
         print('Iter: {}'.format(i))
         print('D loss: {:.4}'.format(d_ls))
@@ -264,10 +294,11 @@ for i in range(num_iterations):
             print("not training generator")
         if not train_d:
             print("not training discriminator")
+        # get generator to see output images
         gen_imgs = sess.run(g, feed_dict = {noise: n, keep_prob: 1.0, is_training:False})
         imgs = [img[:,:,:] for img in gen_imgs]
+        # create montage of 16 of the generated images
         m = montage(imgs[0:16])
-        #m = imgs[0]
         plt.axis('off')
         plt.imshow(m, cmap='gray')
         plt.savefig('{0}/{1}.png'.format(out_dir, str(i).zfill(5)), bbox_inches='tight')
