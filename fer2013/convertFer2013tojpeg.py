@@ -12,6 +12,10 @@ This script requires two command line parameters:
 It generates the images and saves them in three directories inside 
 the output directory - Training, PublicTest, and PrivateTest. 
 These are the three original splits in the dataset. 
+
+Run by:
+mkdir FerImages
+python3 covertFer2013tojpeg.py -f fer2013.csv -o FerImages
 '''
 
 

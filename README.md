@@ -6,6 +6,8 @@ Repository for the Machine Learning Project, Spring 2018.
 [Project Introduction Presentation](https://docs.google.com/presentation/d/1hQ1Hkw4pFi2SgrW0e6UUQaoTpGMrgFOkR3J3KblcrJg/edit?usp=sharing
 )
 
+[Progress Presentation](https://docs.google.com/presentation/d/1XdOLCSpN_ji9HD7PtzCI6S4ZfayyrAErBLdhZisdaLM/edit?usp=sharing)
+
 ## Team
 
 [Lydia](https://github.com/lydialaseur), [Kevin](https://github.com/Kevinisagirl), [Adriana](github.com/acastrops)

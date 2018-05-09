@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import os
 
-
+# this is used to randomly assign weights
 def xavier_init(size):
     in_dim = size[0]
     xavier_stddev = 1. / tf.sqrt(in_dim / 2.)
@@ -13,7 +13,7 @@ def xavier_init(size):
 
 
 X = tf.placeholder(tf.float32, shape=[None, 784]) # shape=[None, img_size, img_size, num_channels]
-Z = tf.placeholder(tf.float32, shape=[None, 100]) # shape=[None, num_classes]? is this y - true?
+Z = tf.placeholder(tf.float32, shape=[None, 100]) # shape=[None, num_starting_noise_pixels]
 
 # Discriminator Layers
 D_W1 = tf.Variable(xavier_init([784, 128]))
@@ -33,7 +33,7 @@ G_b2 = tf.Variable(tf.zeros(shape=[784]))
 
 theta_G = [G_W1, G_W2, G_b1, G_b2]
 
-
+# use to create noise
 def sample_Z(m, n):
     return np.random.uniform(-1., 1., size=[m, n])
 
@@ -100,7 +100,7 @@ if not os.path.exists('out/'):
 
 i = 0
 
-for it in range(1000000):
+for it in range(1):
     if it % 1000 == 0:
         samples = sess.run(G_sample, feed_dict={Z: sample_Z(16, Z_dim)})
 
@@ -110,6 +110,7 @@ for it in range(1000000):
         plt.close(fig)
 
     X_mb, _ = mnist.train.next_batch(mb_size)
+    print(X_mb.shape)
 
     _, D_loss_curr = sess.run([D_solver, D_loss], feed_dict={X: X_mb, Z: sample_Z(mb_size, Z_dim)})
     _, G_loss_curr = sess.run([G_solver, G_loss], feed_dict={Z: sample_Z(mb_size, Z_dim)})
