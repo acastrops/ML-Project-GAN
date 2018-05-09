@@ -36,6 +36,8 @@ with open(args.file, 'rt') as csvfile:
     for row in datareader:
 
         emotion = row[0]
+        if emotion != '3':
+            continue
         pixels = row[1].split()
         usage = row[2]
 

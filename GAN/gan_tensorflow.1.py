@@ -6,6 +6,8 @@ import matplotlib.gridspec as gridspec
 import os
 
 
+np.random.seed(0)
+
 def xavier_init(size):
     in_dim = size[0]
     xavier_stddev = 1. / tf.sqrt(in_dim / 2.)
@@ -35,7 +37,7 @@ theta_G = [G_W1, G_W2, G_b1, G_b2]
 
 
 def sample_Z(m, n):
-    return np.random.uniform(-1., 1., size=[m, n])
+    return np.random.uniform(0., 1., size=[m, n]).astype(np.float32)
 
 
 def generator(z):
@@ -91,18 +93,17 @@ mb_size = 128
 Z_dim = 100
 
 mnist = input_data.read_data_sets('../../MNIST_data', one_hot=True)
-print("Here")
-print(mnist)
 
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
+
 
 if not os.path.exists('out/'):
     os.makedirs('out/')
 
 i = 0
 
-for it in range(10):
+for it in range(10000):
     if it % 1000 == 0:
         samples = sess.run(G_sample, feed_dict={Z: sample_Z(16, Z_dim)})
 

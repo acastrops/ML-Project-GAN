@@ -1,0 +1,8 @@
+normalize_dcgan_faces/*
+run1_dcgan_faces_original/*
+before_imshow_corrected_normalize_dcgan_faces/*
+fer2013/*
+GAN/out/*
+LFWdata/*
+lfw.tgz
+presentation/*

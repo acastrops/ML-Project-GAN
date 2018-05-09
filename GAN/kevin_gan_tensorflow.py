@@ -4,38 +4,48 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import os
+import csv
+import argparse
+import numpy as np 
+import scipy.misc
+import sys
 
+mb_size = mb_size
+Z_dim = 100
 
+w, h = 48, 48
+
+# this is used to randomly assign weights
 def xavier_init(size):
     in_dim = size[0]
     xavier_stddev = 1. / tf.sqrt(in_dim / 2.)
     return tf.random_normal(shape=size, stddev=xavier_stddev)
 
 
-X = tf.placeholder(tf.float32, shape=[None, 784])
+X = tf.placeholder(tf.float32, shape=[None, w, h, 1]) # shape=[None, img_size, img_size, num_channels]
+Z = tf.placeholder(tf.float32, shape=[None, Z_dim]) # shape=[None, num_fakes]
 
-D_W1 = tf.Variable(xavier_init([784, 128]))
-D_b1 = tf.Variable(tf.zeros(shape=[128]))
+# Discriminator Layers
+D_W1 = tf.Variable(xavier_init([l, mb_size]))
+D_b1 = tf.Variable(tf.zeros(shape=[mb_size]))
 
-D_W2 = tf.Variable(xavier_init([128, 1]))
+D_W2 = tf.Variable(xavier_init([mb_size, 1]))
 D_b2 = tf.Variable(tf.zeros(shape=[1]))
 
 theta_D = [D_W1, D_W2, D_b1, D_b2]
 
+# Generator Layers
+G_W1 = tf.Variable(xavier_init([Z_dim, mb_size]))
+G_b1 = tf.Variable(tf.zeros(shape=[mb_size]))
 
-Z = tf.placeholder(tf.float32, shape=[None, 100])
-
-G_W1 = tf.Variable(xavier_init([100, 128]))
-G_b1 = tf.Variable(tf.zeros(shape=[128]))
-
-G_W2 = tf.Variable(xavier_init([128, 784]))
-G_b2 = tf.Variable(tf.zeros(shape=[784]))
+G_W2 = tf.Variable(xavier_init([mb_size, l]))
+G_b2 = tf.Variable(tf.zeros(shape=[l]))
 
 theta_G = [G_W1, G_W2, G_b1, G_b2]
 
-
+# use to create noise
 def sample_Z(m, n):
-    return np.random.uniform(-1., 1., size=[m, n])
+    return np.random.uniform(-1., 1., size=[m, n]).astype(np.float32)
 
 
 def generator(z):
@@ -65,7 +75,7 @@ def plot(samples):
         ax.set_xticklabels([])
         ax.set_yticklabels([])
         ax.set_aspect('equal')
-        plt.imshow(sample.reshape(28, 28), cmap='Greys_r')
+        plt.imshow(sample.reshape(w, h), cmap='Greys_r')
 
     return fig
 
@@ -87,12 +97,35 @@ G_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=D_logit_f
 D_solver = tf.train.AdamOptimizer().minimize(D_loss, var_list=theta_D)
 G_solver = tf.train.AdamOptimizer().minimize(G_loss, var_list=theta_G)
 
-mb_size = 128
-Z_dim = 100
 
-mnist = input_data.read_data_sets('../../MNIST_data', one_hot=True)
-print("Here")
-print(mnist)
+image = np.zeros((l), dtype=np.uint8)
+id = 0
+list3d = [0]*8990
+with open('../fer2013/fer2013.csv', 'rt') as csvfile:
+    datareader = csv.reader(csvfile, delimiter =',')
+    headers = next(datareader, None)
+    print(headers) 
+    for row in datareader:
+
+        emotion = row[0]
+        if emotion != '3':
+            continue
+        # if id == 1000:
+        #     break
+        pixels = row[1].split()
+        usage = row[2]
+
+        pixels_array = np.asarray(pixels).astype(np.float)
+        image = pixels_array
+        
+        list3d[id] = image
+        id += 1 
+        if id % 100 == 0:
+            print('Processed {} images'.format(id))
+
+list3d = list3d[0:id]
+print("Finished processing {} images".format(id))
+array3d = np.vstack(list3d)
 
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
@@ -102,7 +135,7 @@ if not os.path.exists('out/'):
 
 i = 0
 
-for it in range(10):
+for it in range(1000000):
     if it % 1000 == 0:
         samples = sess.run(G_sample, feed_dict={Z: sample_Z(16, Z_dim)})
 
@@ -111,7 +144,7 @@ for it in range(10):
         i += 1
         plt.close(fig)
 
-    X_mb, _ = mnist.train.next_batch(mb_size)
+    X_mb = array3d[np.random.choice(array3d.shape[0], mb_size, replace=True), :]
 
     _, D_loss_curr = sess.run([D_solver, D_loss], feed_dict={X: X_mb, Z: sample_Z(mb_size, Z_dim)})
     _, G_loss_curr = sess.run([G_solver, G_loss], feed_dict={Z: sample_Z(mb_size, Z_dim)})
