@@ -1,3 +1,6 @@
+dcgan_faces_montage_outputs/*
+dcgan_faces_text_outputs/*
+run1_softandnoisy_labels_faces/*
 normalize_dcgan_faces/*
 run1_dcgan_faces_original/*
 before_imshow_corrected_normalize_dcgan_faces/*

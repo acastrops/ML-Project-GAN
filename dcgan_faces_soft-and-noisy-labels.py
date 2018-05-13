@@ -11,15 +11,17 @@ from scipy.misc import imresize, imsave
 import tensorflow as tf
 import glob
 import shutil
-
 plt.switch_backend('agg') # To not open window with plots on the server
-tf.set_random_seed(42)
-np.random.seed(42)
-out_dir = "run3_noise_neg1_1_normalize_dcgan_faces"
+
+out_dir = "run1_softandnoisy_labels_faces"
+
 # method to save print messages to txt file
-printfile = "run3_noise_neg1_1_normalize_dcgan_faces.txt"
+losses_file = "run1_softandnoisy_labels_faces_losses.txt"
+printfile = "run1_softandnoisy_labels_faces.txt"
 if os.path.exists(printfile):
     os.remove(printfile)
+if os.path.exists(losses_file):
+    os.remove(losses_file)
 
 def txtprint(message, outfile=printfile):
     print(message, file=open(outfile, 'a'))
@@ -28,7 +30,6 @@ def txtprint(message, outfile=printfile):
 # for the original LFW data some bash preprocessing was required to unzip the file and move all images to a single folder
 input_dir = '/mnt/d/development/ML-Project-GAN/LFWdata/rawdata'
 resized_img_dir = '/mnt/d/development/ML-Project-GAN/LFWdata/resized/'
-normalized_resized_img_dir = '/mnt/d/development/ML-Project-GAN/LFWdata/resized_and_normalized/'
 input_path = os.path.join(input_dir,'*g') # will work for png or jpg
 
 # All images that match input_path
@@ -42,39 +43,13 @@ if not os.path.exists(resized_img_dir):
         input_img = imread(img)
         resize_img = imresize(input_img, (40,40)) # resizing needs to be a multiple of 4
         img_name = img.split("/")[-1]
-        imsave(resized_img_dir + "/" + img_name, resize_img)
+        imsave(resized_img_dir + "/" + img_name + ".png", resize_img)
     txtprint("Done resizing images")
 else:
     txtprint("Images already resized")
 
 # now grab the resized images we want to work with
 input_path = os.path.join(resized_img_dir,'*g') # will work for png or jpg
-input_files = glob.glob(input_path)
-
-# Normalize the images from -1 to 1 if not already done
-if not os.path.exists(normalized_resized_img_dir):
-    max_img_value = -99999999
-    min_img_value = 99999999
-    txtprint("Finding the Max and Min pixel values")
-    os.makedirs(normalized_resized_img_dir)
-    for img in input_files:
-        input_img = imread(img)
-        max_img_value = max(np.max(input_img), max_img_value)
-        min_img_value = min(np.min(input_img), min_img_value)
-    txtprint(max_img_value)
-    txtprint(min_img_value)
-    txtprint("Normalizing Images to between -1 and 1")
-    for img in input_files:
-        input_img = imread(img)
-        normalized_img = input_img/max_img_value*2-1
-        img_name = img.split("/")[-1]
-        imsave(normalized_resized_img_dir + "/" + img_name, normalized_img)
-    txtprint("Done normalizing images")
-else:
-    txtprint("Images already normalized")
-
-# now grab the normalized images we want to work with
-input_path = os.path.join(normalized_resized_img_dir,'*g') # will work for png or jpg
 input_files = glob.glob(input_path)
 
 # Total number of input images
@@ -85,6 +60,7 @@ example_input = imread(input_files[0])
 w, h, c = example_input.shape # c = # of channels  #for original faces data (250,250,3)
 
 # Create directory for output
+
 if os.path.exists(out_dir):
     shutil.rmtree(out_dir)
 os.makedirs(out_dir)
@@ -258,7 +234,7 @@ def generator(z, keep_prob=keep_prob, is_training=is_training):
         # Kernel shape: [5, 5, 64]
         # Output shape: [batch_size, noise_w*4=original_w, noise_h*4=original_h, filters=c]
         # The resulting output shape is now indentical to that of our original images [w,h,c] where c is 3 for RGB images
-        x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=c, strides=1, padding='same', activation=tf.nn.tanh)
+        x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=c, strides=1, padding='same', activation=tf.nn.sigmoid)
 
         # Returns
 
@@ -283,13 +259,17 @@ vars_d = [var for var in tf.trainable_variables() if var.name.startswith("discri
 d_reg = tf.contrib.layers.apply_regularization(tf.contrib.layers.l2_regularizer(1e-6), vars_d)
 g_reg = tf.contrib.layers.apply_regularization(tf.contrib.layers.l2_regularizer(1e-6), vars_g)
 
+real_label_min=0.7
+real_label_max=1.2
+fake_label_min=0
+fake_label_max=0.3
 # discriminator has two loss functions, one for each disrciminator object (d_real and d_fake)
 # loss_d_real measures how often the discriminator correctly classifies real data as real
-loss_d_real = binary_cross_entropy(tf.ones_like(d_real), d_real)
+loss_d_real = binary_cross_entropy(tf.random_uniform([batch_size,1], minval=real_label_min,maxval=real_label_max), d_real)
 # loss_d_fake measures how often the discriminator correctly classifies fake data as fake
-loss_d_fake = binary_cross_entropy(tf.zeros_like(d_fake), d_fake)
+loss_d_fake = binary_cross_entropy(tf.random_uniform([n_noise,1], minval=fake_label_min, maxval=fake_label_max), d_fake)
 # loss_g measures how often the discriminator incorrectly classified fake data as real
-loss_g = tf.reduce_mean(binary_cross_entropy(tf.ones_like(d_fake), d_fake))
+loss_g = tf.reduce_mean(binary_cross_entropy(tf.random_uniform([n_noise,1], minval=0.7, maxval=1.2), d_fake))
 
 # get average of loss_d_real and loss_d_fake for an overall loss function for discriminator
 loss_d = tf.reduce_mean(0.5 * (loss_d_real + loss_d_fake))
@@ -309,20 +289,23 @@ sess.run(tf.global_variables_initializer())
 
 # training
 txtprint("training")
-num_iterations = 10000
+num_iterations = 10001
 for i in range(num_iterations):
-
-    # for deterministic behavior between runs, but still differences between iterations
-    tf.set_random_seed(42+i)
-    np.random.seed(42+i)
-    
+    real_label_min=0.7
+    real_label_max=1.2
+    fake_label_min=0
+    fake_label_max=0.3
+    if i % 100 == 0:
+        txtprint("flipped labels",  outfile=losses_file)
+        real_label_min, fake_label_min = fake_label_min, real_label_min
+        real_label_max, fake_label_max = fake_label_max, real_label_max
     # set both discriminator and generator to be trained simultaneously
     train_d = True
     train_g = True
     keep_prob_train = 0.6 #0.5
 
     # generate a batch of noise vectors, to be input into generator
-    n = np.random.uniform(-1.0, 1.0, [batch_size, n_noise]).astype(np.float32)
+    n = np.random.uniform(0.0, 1.0, [batch_size, n_noise]).astype(np.float32)
 
 
     # generate a random batch of real images, save as a list of numpy arrays
@@ -356,7 +339,8 @@ for i in range(num_iterations):
         sess.run(optimizer_g, feed_dict={noise: n, keep_prob: keep_prob_train, is_training:True})
 
     losses_to_print = str(d_ls) + "," + str(g_ls)
-    txtprint(losses_to_print, outfile="run3_noise_neg1_1_losses_Normalized_Input.txt")
+    txtprint(losses_to_print, outfile=losses_file)
+
     # print progress output
     if not i % 10:
         txtprint('Iter: {}'.format(i))
@@ -371,14 +355,5 @@ for i in range(num_iterations):
         gen_imgs = sess.run(g, feed_dict = {noise: n, keep_prob: 1.0, is_training:False})
         imgs = [img[:,:,:] for img in gen_imgs]
         # create montage of 16 of the generated images
-        sample = imgs[0:16]
-        # max_img_value = -99999999
-        # min_img_value = 99999999
-        # for j in range(len(sample)):
-        #     sample[j] = (sample[j]+1)/2
-        #     max_img_value = max(np.max(sample[j]), max_img_value)
-        #     min_img_value = min(np.min(sample[j]), min_img_value)
-        # txtprint(max_img_value)
-        # txtprint(min_img_value)
-        m = montage(sample)
+        m = montage(imgs[0:16])
         imsave(out_dir + "/" + str(i).zfill(5) + ".png", m)
