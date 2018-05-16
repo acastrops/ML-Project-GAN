@@ -15,14 +15,14 @@ import shutil
 plt.switch_backend('agg') # To not open window with plots on the server
 tf.set_random_seed(42)
 np.random.seed(42)
-out_dir = "normalize_dcgan_faces"
+out_dir = "run3_noise_neg1_1_normalize_dcgan_faces"
 # method to save print messages to txt file
-printfile = "normalize_dcgan_faces.txt"
+printfile = "run3_noise_neg1_1_normalize_dcgan_faces.txt"
 if os.path.exists(printfile):
     os.remove(printfile)
 
-def txtprint(message):
-    print(message, file=open(printfile, 'a'))
+def txtprint(message, outfile=printfile):
+    print(message, file=open(outfile, 'a'))
 
 # Path to directory containing all the training imgs
 # for the original LFW data some bash preprocessing was required to unzip the file and move all images to a single folder
@@ -42,7 +42,7 @@ if not os.path.exists(resized_img_dir):
         input_img = imread(img)
         resize_img = imresize(input_img, (40,40)) # resizing needs to be a multiple of 4
         img_name = img.split("/")[-1]
-        imsave(resized_img_dir + "/" + img_name + ".png", resize_img)
+        imsave(resized_img_dir + "/" + img_name, resize_img)
     txtprint("Done resizing images")
 else:
     txtprint("Images already resized")
@@ -68,7 +68,7 @@ if not os.path.exists(normalized_resized_img_dir):
         input_img = imread(img)
         normalized_img = input_img/max_img_value*2-1
         img_name = img.split("/")[-1]
-        imsave(normalized_resized_img_dir + "/" + img_name + ".png", normalized_img)
+        imsave(normalized_resized_img_dir + "/" + img_name, normalized_img)
     txtprint("Done normalizing images")
 else:
     txtprint("Images already normalized")
@@ -322,7 +322,7 @@ for i in range(num_iterations):
     keep_prob_train = 0.6 #0.5
 
     # generate a batch of noise vectors, to be input into generator
-    n = np.random.uniform(0.0, 1.0, [batch_size, n_noise]).astype(np.float32)
+    n = np.random.uniform(-1.0, 1.0, [batch_size, n_noise]).astype(np.float32)
 
 
     # generate a random batch of real images, save as a list of numpy arrays
@@ -355,6 +355,8 @@ for i in range(num_iterations):
     if train_g:
         sess.run(optimizer_g, feed_dict={noise: n, keep_prob: keep_prob_train, is_training:True})
 
+    losses_to_print = str(d_ls) + "," + str(g_ls)
+    txtprint(losses_to_print, outfile="run3_noise_neg1_1_losses_Normalized_Input.txt")
     # print progress output
     if not i % 10:
         txtprint('Iter: {}'.format(i))
@@ -370,10 +372,13 @@ for i in range(num_iterations):
         imgs = [img[:,:,:] for img in gen_imgs]
         # create montage of 16 of the generated images
         sample = imgs[0:16]
-        for j in range(len(sample)):
-            sample[j] = (sample[j]+1)/2
-        txtprint(sample[0])
+        # max_img_value = -99999999
+        # min_img_value = 99999999
+        # for j in range(len(sample)):
+        #     sample[j] = (sample[j]+1)/2
+        #     max_img_value = max(np.max(sample[j]), max_img_value)
+        #     min_img_value = min(np.min(sample[j]), min_img_value)
+        # txtprint(max_img_value)
+        # txtprint(min_img_value)
         m = montage(sample)
-        plt.axis('off')
-        plt.imshow(m)
-        plt.savefig('{0}/{1}.png'.format(out_dir, str(i).zfill(5)), bbox_inches='tight')
+        imsave(out_dir + "/" + str(i).zfill(5) + ".png", m)

@@ -13,14 +13,16 @@ import glob
 import shutil
 plt.switch_backend('agg') # To not open window with plots on the server
 
-out_dir = "normalize_dcgan_faces"
+out_dir = "./dcgan_faces_montage_outputs/dcgan_original_faces"
+
 # method to save print messages to txt file
-printfile = "print.txt"
+losses_file = "./dcgan_faces_text_outputs/dcgan_original_faces_losses.txt"
+printfile = "./dcgan_faces_text_outputs/dcgan_original_faces.txt"
 if os.path.exists(printfile):
     os.remove(printfile)
 
-def txtprint(message):
-    print(message, file=open(printfile, 'a'))
+def txtprint(message, outfile=printfile):
+    print(message, file=open(outfile, 'a'))
 
 # Path to directory containing all the training imgs
 # for the original LFW data some bash preprocessing was required to unzip the file and move all images to a single folder
@@ -322,6 +324,9 @@ for i in range(num_iterations):
     if train_g:
         sess.run(optimizer_g, feed_dict={noise: n, keep_prob: keep_prob_train, is_training:True})
 
+    losses_to_print = str(d_ls) + "," + str(g_ls)
+    txtprint(losses_to_print, outfile=losses_file)
+
     # print progress output
     if not i % 10:
         txtprint('Iter: {}'.format(i))
@@ -337,6 +342,4 @@ for i in range(num_iterations):
         imgs = [img[:,:,:] for img in gen_imgs]
         # create montage of 16 of the generated images
         m = montage(imgs[0:16])
-        plt.axis('off')
-        plt.imshow(m, cmap='gray')
-        plt.savefig('{0}/{1}.png'.format(out_dir, str(i).zfill(5)), bbox_inches='tight')
+        imsave(out_dir + "/" + str(i).zfill(5) + ".png", m)
