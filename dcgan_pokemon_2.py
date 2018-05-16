@@ -345,7 +345,7 @@ for i in range(num_iterations):
         # create montage of 16 of the generated images
         gen_montage = montage(best_gen_imgs[0:16])
         plt.axis('off')
-        plt.imshow(m, cmap='gray')
+        plt.imshow(gen_montage, cmap='gray')
         plt.savefig('{0}/{1}.png'.format(out_dir_gen, str(i).zfill(5)), bbox_inches='tight')
 
 
