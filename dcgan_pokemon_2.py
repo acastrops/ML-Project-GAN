@@ -22,6 +22,7 @@ input_path = os.path.join(input_dir,'*g') # will work for png or jpg
 # All images that match input_path
 input_files = glob.glob(input_path)
 
+
 # Total number of input images
 total_input = len(input_files)
 
@@ -30,12 +31,15 @@ example_input = imread(input_files[0])
 w, h, c = example_input.shape # c = # of channels
 
 # Create directory for output images
-out_dir = "pokemon_out_7"
-if os.path.exists(out_dir):
-    shutil.rmtree(out_dir)
-os.makedirs(out_dir)
+out_dir_gen = "pokemon_gen_out"
+if os.path.exists(out_dir_gen):
+    shutil.rmtree(out_dir_gen)
+os.makedirs(out_dir_gen)
 
-
+# out_dir_batch = "pokemon_batch_out"
+# if os.path.exists(out_dir_batch):
+#     shutil.rmtree(out_dir_batch)
+# os.makedirs(out_dir_batch)
 
 # Method to pull random batch of images
 def next_batch(num, data=input_files):
@@ -43,8 +47,8 @@ def next_batch(num, data=input_files):
     np.random.shuffle(idx)
     idx = idx[:num]
     data_shuffle = [imread(data[i]) for i in idx]
-
     shuffled = np.asarray(data_shuffle)
+
 
     return shuffled
 
@@ -81,9 +85,10 @@ def montage(images):
     return m
 
 # Method to pull the best of the generator's batch based on the discriminator scores.
-def best_gen_imgs(gen_imgs, discrim_scores, num_best):
+def get_best_imgs(gen_imgs, discrim_scores, num_best):
     best_indexes = np.flip(np.argsort(discrim_scores),0)[0:num_best]
     best_imgs = gen_imgs[best_indexes]
+    best_imgs = np.reshape(best_imgs,(16,60,60,3))
     return(best_imgs)
 
 # Definition of the network
@@ -200,6 +205,17 @@ def generator(z, keep_prob=keep_prob, is_training=is_training):
         # Fourth batch norm layer
         x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
 
+
+        #Adding new layer
+        # Third convolutional layer: applies 32 different kernels over each "image" from the previous layer, with stride of 1
+        # Kernel shape: [5, 5, 64]
+        # Output shape: [batch_size, noise_w*4=original_w, noise_h*4=original_h, filters=32]
+        x = tf.layers.conv2d_transpose(x, kernel_size=5, filters=32, strides=1, padding='same', activation=activation)
+        x = tf.layers.dropout(x, keep_prob) #4
+        # Fourth batch norm layer
+        x = tf.contrib.layers.batch_norm(x, is_training=is_training, decay=momentum)
+
+
         # Fourth convolutional layer: applied 3 different kernels over each "image" from the previous layer, with stride of 1
         # Kernel shape: [5, 5, 64]
         # Output shape: [batch_size, noise_w*4=original_w, noise_h*4=original_h, filters=c]
@@ -253,9 +269,9 @@ sess.run(tf.global_variables_initializer())
 
 # training
 print("training")
-num_iterations = 5000
+num_iterations = 5
 
-loss_log_filename = "loss_log_pokemon_7.csv"
+loss_log_filename = "loss_log_dbz_1.csv"
 loss_log = open(loss_log_filename, "w")
 loss_log.write("d_loss,g_loss,train_d,train_g,catch_up\n")
 
@@ -312,7 +328,7 @@ for i in range(num_iterations):
         sess.run([loss_d,loss_g,optimizer_d], feed_dict={noise: n, X_in: batch, keep_prob: keep_prob_train, is_training:True})
         loss_log.write("{0},{1},{2},{3},{4}\n".format(str(d_ls),str(g_ls),str(train_d),str(train_g),str(catch_up)))
     # print progress output
-    if not i % 50:
+    if not i % 1:
         print('Iter: {}'.format(i))
         print('Discriminator loss: {:.4}'.format(d_ls))
         print('Generator loss: {:.4}'.format(g_ls))
@@ -324,15 +340,13 @@ for i in range(num_iterations):
         print()
         # get generator to see output images
         gen_imgs, discrim_scores = sess.run([g, d_fake], feed_dict = {noise: n, keep_prob: 1.0, is_training:False})
-        imgs = best_gen_imgs(np.array(gen_imgs),np.array(discrim_scores),16)
-        # sorted_disc_scores = sorted(disc_scores)
-        # for
-
-        imgs = [img[:,:,:] for img in gen_imgs]
+        best_gen_imgs = get_best_imgs(gen_imgs,discrim_scores,16)
+        best_gen_imgs = [img[:,:,:] for img in best_gen_imgs]
         # create montage of 16 of the generated images
-        m = montage(imgs[0:16])
+        gen_montage = montage(best_gen_imgs[0:16])
         plt.axis('off')
         plt.imshow(m, cmap='gray')
-        plt.savefig('{0}/{1}.png'.format(out_dir, str(i).zfill(5)), bbox_inches='tight')
+        plt.savefig('{0}/{1}.png'.format(out_dir_gen, str(i).zfill(5)), bbox_inches='tight')
+
 
 loss_log.close()
